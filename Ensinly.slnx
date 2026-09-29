@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ensinly.client/ensinly.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="Ensinly.Server/Ensinly.Server.csproj" />
+</Solution>

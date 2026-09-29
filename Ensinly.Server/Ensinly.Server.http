@@ -1,0 +1,6 @@
+@Ensinly.Server_HostAddress = http://localhost:5287
+
+GET {{Ensinly.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

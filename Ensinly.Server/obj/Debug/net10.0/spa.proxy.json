@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:59670",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Projetos\\Ensinly\\Ensinly.Server\\..\\ensinly.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}
