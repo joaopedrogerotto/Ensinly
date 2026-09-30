@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="035ED551-8D7E-51DF-7DC5-B03C66DBF7A3" name="ATIVIDADES">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:14:16 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ATV_ID" id="60C8361E-0B87-4A14-393F-08B0E7329833">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:14:29 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ATV_TITULO" id="003EF343-AA0F-CE72-A6E4-4D3BB9D07325">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:14:34 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ATV_DESCRICAO" id="FC7AFE9B-F626-11F8-9D10-806F2F5769E5">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:14:59 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ATV_DT_LIMITE" id="673CEF26-B6E1-BC9D-414D-17CD89C60361">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:15:21 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ATV_ACEITA_ATRASO" id="80A95CAC-89F3-5E62-E0C3-461B864CD4A2">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:26:32 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT034</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4D48A87C-BBA8-C17D-34F1-7D6AB9D1BB5A" name="ATIVIDADES PK">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:14:42 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>60C8361E-0B87-4A14-393F-08B0E7329833</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9A55550B-D8F7-FB17-A25A-C3C80A28D4CC" name="AULAS">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:01:58 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="AUL_ID" id="33FA9995-C70E-CA22-3B53-AB2A08634621">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:05:53 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AUL_DT_HR_INICIO" id="25293E1D-F838-7BF8-D77E-1D3FA1EA0EC0">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:07:02 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AUL_DT_HR_FIM" id="25EA4B8A-9A12-2BEA-A241-9A22CE57AD59">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:07:23 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AUL_OBSERVACAO" id="17AF5872-1350-366C-6F85-FC27CFF97F86">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:07:37 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AUL_ALU_ID" id="FBD94C83-7737-E9B5-E0D1-14167D9DDE5F">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:04:42 UTC</createdTime>
+<generatorID>D1EC3232-8915-C6CA-53B2-AEA445410BEB</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<referedAttribute>D50D2BA0-A722-39C7-2E99-0BC39471D41C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AUL_PRF_ID" id="5AC4C23E-A6A8-4035-6217-1E824E12EA21">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:06:42 UTC</createdTime>
+<generatorID>916705E5-A983-44E3-8483-C38328103DFA</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<referedAttribute>BDB176DB-47D9-7409-E7A9-76FC25F421FD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AUL_STA_ID" id="A15F8098-3F11-059F-00FC-464770467057">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:12:02 UTC</createdTime>
+<generatorID>79BCCC18-6896-66F4-1F8B-A742175399DC</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<referedAttribute>92726879-0FCA-83A7-E095-B8196DA92B84</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="767D00E1-B288-4AA3-0601-F5ABF9F0FDC4" name="AULAS PK">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 01:06:19 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>33FA9995-C70E-CA22-3B53-AB2A08634621</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
