@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="56A0969C-286D-EDBE-A4F5-830BE0494246" name="MATERIAIS_PROFESSORES">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<ordsAlias>relation_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MTPF_MAT_ID" id="F22D66BD-EE21-DF0A-D62F-791720C98D53">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1E8A03C5-1F63-DE34-9F3E-7041F439810B" referredColumn="6E457B19-9DC5-9FE2-B6DB-437C7CB0D547"/>
+</associations>
+</Column>
+<Column name="MTPF_PRF_ID" id="7012AAE6-2B44-86C9-9758-F749167F879F">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="24A474FF-815A-E980-596B-AB28DF048515" referredColumn="7149A80A-B2F2-B97C-92AF-3B62FDAA5D55"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C510DF4D-8871-607B-D6B1-0D9A4CE54EC6" name="PK_MTPF">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F22D66BD-EE21-DF0A-D62F-791720C98D53"/>
+<colUsage columnID="7012AAE6-2B44-86C9-9758-F749167F879F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ABBA8911-5FAE-D8A7-E953-A34B486F1DBB" name="FK_MTPF_MAT">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>B1C683FB-3077-74EF-35BE-A9E2563C4075</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F22D66BD-EE21-DF0A-D62F-791720C98D53"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0D0436BE-1B10-A225-61B8-E45528905766" name="FK_MTPF_PRF">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>B1C683FB-3077-74EF-35BE-A9E2563C4075</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7012AAE6-2B44-86C9-9758-F749167F879F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

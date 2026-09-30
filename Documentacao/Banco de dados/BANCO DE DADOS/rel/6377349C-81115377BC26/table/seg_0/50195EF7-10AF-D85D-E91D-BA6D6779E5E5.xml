@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="50195EF7-10AF-D85D-E91D-BA6D6779E5E5" name="PERGUNTAS">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>D6EBE6C0-26C4-CC34-A90A-9675EE74B06E</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PGT_ID" id="9CC8397A-7FF1-BDA1-186E-AF85F44E4EED">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>FF4B1A86-C552-0F25-4ED7-D0592B141442</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PGT_PERGUNTA" id="1FAE1830-5013-04FA-DD25-22547E939070">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>AE4DF270-8B51-B2BC-F70B-3CDA40FED65B</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PGT_OBRIGATORIA" id="405DF58F-A6BE-FBC6-2122-4747A49990F4">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>822F19D5-6099-89F4-5E55-EB05F239E470</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT034</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PGT_TPP_ID" id="78F07290-0C74-F98A-0C07-6E1B470D3F3F">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>B1304AAB-58A1-33DB-3D0B-1103776CFF58</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F56945B1-3ACE-8CBF-1227-E31D9E61EA7C" referredColumn="9B54F91E-8A14-3D4E-C0C3-90AD147CA44A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D267A2EA-101C-0F63-D9C3-A9D776330E70" name="PK_PGT">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>76D9E8B4-1651-7F92-BF99-335868EAFFB8</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CC8397A-7FF1-BDA1-186E-AF85F44E4EED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D0908E62-8AED-4EB2-F6CB-4D150A8789BA" name="FK_PGT_TPP">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>5C929CBA-A1EB-3D74-B084-9D90F86EF9FF</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="78F07290-0C74-F98A-0C07-6E1B470D3F3F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

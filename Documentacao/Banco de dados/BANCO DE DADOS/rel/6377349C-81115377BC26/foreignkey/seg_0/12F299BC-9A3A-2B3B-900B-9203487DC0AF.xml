@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="12F299BC-9A3A-2B3B-900B-9203487DC0AF" containerWithKeyObject="0A74DB07-4D44-9D48-61CA-057A361F17F4" localFKIndex="A20CA25F-1005-01D6-9BB3-978FFBA6E7BF" name="FK_ATPG_ATV">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>3416B4CA-ED12-E9A3-C625-8D4BD6875146</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<referredTableLongName>ATIVIDADES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>597B5F0F-A614-7394-71D5-43783EFD6C79</referredTableID>
+<keyObject>52B88688-DC57-A07A-D9B5-9A2461DCEDEC</keyObject>
+<referredKeyID>52B88688-DC57-A07A-D9B5-9A2461DCEDEC</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ATV_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

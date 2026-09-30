@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CC2B973C-9A5A-2C81-9C58-27D85353D81C" name="MATERIAIS">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>3DC48391-4F2C-DB6A-492A-30A1265FC755</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MTR_ID" id="86CEA966-73AD-3612-61A6-69DF564FD0D0">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>669AA8E9-6868-1F81-AA3C-19558199E566</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MTR_TITULO" id="5CFC8439-9A5F-33EE-9BD1-C3F49307FA21">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>8EC4488C-B905-A8C9-7CC3-DECE33C1861B</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MTR_DESCRICAO" id="19F7AB2B-DCA1-6497-5222-C525D4897EC9">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>58717FE5-8D16-11AF-384B-D81CB7A0B9C4</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1500</dataTypeSize>
+<ownDataTypeParameters>1500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MTR_URL" id="B0B11AD9-D414-CF9F-3380-266769AFE077">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>04961D76-1F18-2BA8-C9BA-2342048E2061</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8F18CE3F-8C98-0A51-D74D-BA86A97C68BD" name="MATERIAIS_PK">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>E5C9CDE6-EABD-294A-D99C-3CE2A30F004D</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="86CEA966-73AD-3612-61A6-69DF564FD0D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="651BFB04-F1B4-4559-38C0-41618A575C62" name="ALUNOS">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0848A371-BCF3-4B33-5F0F-B31FFF2E23A7" name="CORRECOES">
 <createdBy>jp120</createdBy>
-<createdTime>2026-09-30 00:45:58 UTC</createdTime>
+<createdTime>2026-09-30 12:41:53 UTC</createdTime>
 <ownerDesignName>BANCO DE DADOS</ownerDesignName>
 <engineerTo>
 <item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ALU_ID" id="D50D2BA0-A722-39C7-2E99-0BC39471D41C">
+<Attribute name="CRR_ID" id="02E68507-75C8-FAC1-2167-69C2751F8528">
 <createdBy>jp120</createdBy>
-<createdTime>2026-09-30 00:47:54 UTC</createdTime>
+<createdTime>2026-09-30 12:42:05 UTC</createdTime>
 <ownerDesignName>BANCO DE DADOS</ownerDesignName>
 <engineerTo>
 <item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
@@ -27,9 +27,37 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ALU_DT_NASCIMENTO" id="5322958D-5F21-84E4-35ED-360D17819289">
+<Attribute name="CRR_NOTA" id="52B3247D-597F-3C50-D785-EF5B0FBEE254">
 <createdBy>jp120</createdBy>
-<createdTime>2026-09-30 00:48:16 UTC</createdTime>
+<createdTime>2026-09-30 12:42:17 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CRR_OBSERVACAO" id="E14F9B52-C09B-7B99-D0C7-07BEBAEEA1D7">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 12:42:33 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CRR_DATA_CORRECAO" id="DC2E5460-7378-0885-13D9-0BE1BE522EF8">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 12:42:47 UTC</createdTime>
 <ownerDesignName>BANCO DE DADOS</ownerDesignName>
 <engineerTo>
 <item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
@@ -39,43 +67,29 @@
 <logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ALU_OBSERVACAO" id="DC470C6E-610D-912F-A948-14C77C8181C7">
+<Attribute name="CRR_EAT_ID" id="24E3D151-5EB0-9A00-1488-108A34C5440D">
 <createdBy>jp120</createdBy>
-<createdTime>2026-09-30 00:48:34 UTC</createdTime>
+<createdTime>2026-09-30 12:44:24 UTC</createdTime>
+<generatorID>769D9380-11FD-ECEC-4ED5-C71E34697080</generatorID>
 <ownerDesignName>BANCO DE DADOS</ownerDesignName>
 <engineerTo>
 <item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>1000</dataTypeSize>
-<ownDataTypeParameters>1000,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="ALU_USU_ID" id="99989DD4-3C2E-087C-A423-10AA3B2F7FA0">
-<createdBy>jp120</createdBy>
-<createdTime>2026-09-30 00:52:55 UTC</createdTime>
-<generatorID>98134995-9C1D-570E-620D-7A7390A1B006</generatorID>
-<ownerDesignName>BANCO DE DADOS</ownerDesignName>
-<engineerTo>
-<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
-</engineerTo>
-<referedAttribute>B0EC699D-3F25-90E0-1B54-301E6B80A764</referedAttribute>
+<referedAttribute>A2637E22-0498-DCD3-F48B-2C3EEA85359F</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ALU_NVA_ID" id="1B9EB6CA-D0FB-A418-93B0-093AA4860C05">
+<Attribute name="CRR_PRF_ID" id="6AD583E6-1F61-29FF-E013-9C46FB7CE22A">
 <createdBy>jp120</createdBy>
-<createdTime>2026-09-30 01:13:32 UTC</createdTime>
-<generatorID>9DDF2210-3EF5-B31F-64B0-5C1296E2537D</generatorID>
+<createdTime>2026-09-30 12:44:40 UTC</createdTime>
+<generatorID>7847AC9F-241B-D8B5-13F2-632020C5AF90</generatorID>
 <ownerDesignName>BANCO DE DADOS</ownerDesignName>
 <engineerTo>
 <item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
 </engineerTo>
-<referedAttribute>00DA1BF5-595F-5063-AF53-54AC8B3F0927</referedAttribute>
+<referedAttribute>BDB176DB-47D9-7409-E7A9-76FC25F421FD</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -83,16 +97,16 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="4C34FFE2-4DCC-1025-4E5A-50D3797341CD" name="ALUNOS PK">
+<identifier id="DB7D2B66-B1B6-DFD2-A0D1-46016DFCD9E1" name="CORRECOES PK">
 <createdBy>jp120</createdBy>
-<createdTime>2026-09-30 00:48:11 UTC</createdTime>
+<createdTime>2026-09-30 12:42:16 UTC</createdTime>
 <ownerDesignName>BANCO DE DADOS</ownerDesignName>
 <engineerTo>
 <item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>D50D2BA0-A722-39C7-2E99-0BC39471D41C</attributeRef>
+<attributeRef>02E68507-75C8-FAC1-2167-69C2751F8528</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

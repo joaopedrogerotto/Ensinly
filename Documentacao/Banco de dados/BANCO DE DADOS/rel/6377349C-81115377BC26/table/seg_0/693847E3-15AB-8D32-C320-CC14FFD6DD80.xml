@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="693847E3-15AB-8D32-C320-CC14FFD6DD80" name="CORRECOES">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>0848A371-BCF3-4B33-5F0F-B31FFF2E23A7</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CRR_ID" id="4322CC48-4B68-B19C-6B0F-7BCE9CA4E904">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>02E68507-75C8-FAC1-2167-69C2751F8528</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRR_NOTA" id="2EDBCAD6-9EDA-F220-DD9A-FF7CC1B1B08C">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>52B3247D-597F-3C50-D785-EF5B0FBEE254</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRR_OBSERVACAO" id="ABDCA32B-02B2-FEBB-01B4-5178F4830CB2">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>E14F9B52-C09B-7B99-D0C7-07BEBAEEA1D7</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRR_DATA_CORRECAO" id="80390861-FFC0-C3A6-D6C3-CA32B8D802DF">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>DC2E5460-7378-0885-13D9-0BE1BE522EF8</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRR_EAT_ID" id="5012CF42-E920-27A1-2C96-71859E7DE928">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>24E3D151-5EB0-9A00-1488-108A34C5440D</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="894F079B-5AEE-60CD-AB77-AD687F4E112B" referredColumn="D22EA9DD-42E5-0ADE-C58E-2FF97F6FB138"/>
+</associations>
+</Column>
+<Column name="CRR_PRF_ID" id="13528B8D-E23C-0A65-B3BD-36A7F1FE0493">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>6AD583E6-1F61-29FF-E013-9C46FB7CE22A</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="101E8082-C505-AEA3-B627-3B8FE7B5EFE3" referredColumn="7149A80A-B2F2-B97C-92AF-3B62FDAA5D55"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3320A457-B832-EBEA-98F4-4A9729ECD67D" name="PK_CRR">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>DB7D2B66-B1B6-DFD2-A0D1-46016DFCD9E1</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4322CC48-4B68-B19C-6B0F-7BCE9CA4E904"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A3B2D5F8-CEA8-82D3-EF51-D8D3C1EFAEE9" name="FK_CRR_ATV">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>769D9380-11FD-ECEC-4ED5-C71E34697080</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5012CF42-E920-27A1-2C96-71859E7DE928"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C56DA9CF-A8F3-D602-258C-97615FA27944" name="FK_CRR_EAT">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>7847AC9F-241B-D8B5-13F2-632020C5AF90</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13528B8D-E23C-0A65-B3BD-36A7F1FE0493"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

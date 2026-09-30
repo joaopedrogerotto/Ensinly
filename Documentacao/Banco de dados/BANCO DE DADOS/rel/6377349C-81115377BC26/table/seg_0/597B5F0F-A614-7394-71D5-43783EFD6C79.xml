@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="597B5F0F-A614-7394-71D5-43783EFD6C79" name="ATIVIDADES">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>035ED551-8D7E-51DF-7DC5-B03C66DBF7A3</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ATV_ID" id="ED0E566A-E39F-B858-E30D-DAFED8D27D12">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>60C8361E-0B87-4A14-393F-08B0E7329833</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ATV_TITULO" id="CDC86596-B221-27F9-86BE-F73F26651BE1">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>003EF343-AA0F-CE72-A6E4-4D3BB9D07325</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ATV_DESCRICAO" id="1681A067-67FB-2842-3E2B-BD250C2E34FD">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>FC7AFE9B-F626-11F8-9D10-806F2F5769E5</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ATV_DT_LIMITE" id="7CEE2F17-2B0A-191B-3D12-E75F60E4BCA5">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>673CEF26-B6E1-BC9D-414D-17CD89C60361</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ATV_ACEITA_ATRASO" id="AF994EBE-84DD-6BFB-E4D6-5A87E8E62E64">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>80A95CAC-89F3-5E62-E0C3-461B864CD4A2</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT034</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ATV_AUL_ID" id="EE32796C-00C7-7FCC-BB7F-27D38FE745CC">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>115D2F4B-E192-5119-C4F7-FB703FAAFDBC</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B24914DF-3943-3543-3FC8-C5610278B197" referredColumn="93A83B8F-8261-1B1B-C6D8-7EF0A41A43EB"/>
+</associations>
+</Column>
+<Column name="ATV_STV_ID" id="7A7BC5EA-EF8A-DBB5-55D5-925E6F96AFB4">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>F09B50C3-D6BB-3E39-6D9C-6185A3AB94F7</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="00D1C047-ACE7-3E3D-B2C6-B3DF6335E7DC" referredColumn="18906CCF-9BDF-1D5E-A601-DC8A4ADADD3A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="52B88688-DC57-A07A-D9B5-9A2461DCEDEC" name="PK_ATV">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>4D48A87C-BBA8-C17D-34F1-7D6AB9D1BB5A</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED0E566A-E39F-B858-E30D-DAFED8D27D12"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7BCB4889-DDDC-8C21-FA7E-F87CFA1898E8" name="FK_ATV_AUL">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>F28ED890-781D-6EEB-5A84-7D9A0821D46F</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE32796C-00C7-7FCC-BB7F-27D38FE745CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9C409B21-E09E-983B-B782-9AE7CE2C243A" name="FK_ATV_STV">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>2834C4DD-0406-C164-F2B3-4C2986D832C0</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A7BC5EA-EF8A-DBB5-55D5-925E6F96AFB4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

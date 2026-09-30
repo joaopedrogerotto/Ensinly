@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="71DD3009-2A17-C986-4B45-CB01CC80FD87" name="PROFESSORES_ALUNOS">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<ordsAlias>relation_11</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PFAL_PRF_ID" id="A153A07C-58F0-52CE-F73E-B379B434FFB0">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="02DDA1B8-5668-9760-3A08-351BA970AB74" referredColumn="7149A80A-B2F2-B97C-92AF-3B62FDAA5D55"/>
+</associations>
+</Column>
+<Column name="PFAL_ALU_ID" id="BF927D56-C14D-7E87-346F-403DC4A8B296">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B878E000-D3D3-5BA1-1369-549F6FFE3AA8" referredColumn="AD958F61-9CC3-F23C-2DF9-844656D65EF2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="32775914-4EF9-DBF5-A6BA-CF1ECB8DBA85" name="PK_PFAL">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A153A07C-58F0-52CE-F73E-B379B434FFB0"/>
+<colUsage columnID="BF927D56-C14D-7E87-346F-403DC4A8B296"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0DE4E71A-7F58-EF18-AA38-6DA8DDABFAAB" name="FK_PFAL_PRF">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>CAEEE9CF-57C2-FBF2-1591-61E23F8CBDC1</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A153A07C-58F0-52CE-F73E-B379B434FFB0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="381B00CA-930E-F8A4-06EF-6F4FB42553FF" name="FK_PFAL_ALU">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>CAEEE9CF-57C2-FBF2-1591-61E23F8CBDC1</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BF927D56-C14D-7E87-346F-403DC4A8B296"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

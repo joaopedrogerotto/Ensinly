@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EA0A7132-D06F-E52C-6467-2DCCD5FABBFD" name="ENTREGAS_ATIVIDADE">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>2DC76611-1513-A5A3-78AB-78EFD96C454A</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EAT_ID" id="D22EA9DD-42E5-0ADE-C58E-2FF97F6FB138">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>A2637E22-0498-DCD3-F48B-2C3EEA85359F</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EAT_DT_ENTREGA" id="548FB327-B0F2-84EA-AAC6-375D6F049263">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>D2DBDD18-9218-2342-4AFE-EB0D4942FF15</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EAT_OBSERVACAO_ALUNO" id="0D49BAF1-5FA9-478F-58C7-8BF935586510">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>51838952-B38A-0EBB-A3BA-62DEFA0CB528</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EAT_ATV_ID" id="DB021DC7-E3A7-7663-C279-353277697AF7">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>9C56C692-475B-7093-DEEC-060F4544F515</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C94F024D-0142-406F-60B1-F24EDD2CDBC1" referredColumn="ED0E566A-E39F-B858-E30D-DAFED8D27D12"/>
+</associations>
+</Column>
+<Column name="EAT_ALU_ID" id="FD07BC94-7639-76C5-701D-E6355B2623C2">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>BC790220-10DF-B1AC-135D-2A457E0CFC99</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="62CE0428-CA38-9E4F-8FB0-1AEB28FED258" referredColumn="AD958F61-9CC3-F23C-2DF9-844656D65EF2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="753911AD-EEDC-540F-4B50-8505D7249BD2" name="PK_EAT">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>0E9156A6-63E9-F805-33E9-0E73EC6E3CB1</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D22EA9DD-42E5-0ADE-C58E-2FF97F6FB138"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D8654D4C-AA42-9FEB-5DD5-43426C82EFF0" name="FK_EAT_ATV">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>0E71A044-EAB9-0CE5-EED7-BB3CFA843467</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DB021DC7-E3A7-7663-C279-353277697AF7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D38D913A-2D3C-D137-09F9-13E3992B780E" name="FK_EAT_ALU">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>C7FF1CC7-9DBC-4EBF-C5AD-521D32E00089</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FD07BC94-7639-76C5-701D-E6355B2623C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

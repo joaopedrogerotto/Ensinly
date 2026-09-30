@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0A74DB07-4D44-9D48-61CA-057A361F17F4" name="ATIVIDADES_PERGUNTAS">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<ordsAlias>relation_16</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ATPG_ATV_ID" id="4CE359F8-528D-B989-1A43-847EF1A6FAF3">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="12F299BC-9A3A-2B3B-900B-9203487DC0AF" referredColumn="ED0E566A-E39F-B858-E30D-DAFED8D27D12"/>
+</associations>
+</Column>
+<Column name="ATPG_PGT_ID" id="4C82692D-638A-FD4B-90B4-28886A16F681">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BFF70561-B990-C413-805D-4FD281C3142C" referredColumn="9CC8397A-7FF1-BDA1-186E-AF85F44E4EED"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0867E915-927C-0DBD-34A6-60F60421530B" name="PK_ATPG">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CE359F8-528D-B989-1A43-847EF1A6FAF3"/>
+<colUsage columnID="4C82692D-638A-FD4B-90B4-28886A16F681"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A20CA25F-1005-01D6-9BB3-978FFBA6E7BF" name="FK_ATPG_ATV">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>3416B4CA-ED12-E9A3-C625-8D4BD6875146</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CE359F8-528D-B989-1A43-847EF1A6FAF3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A6F73E72-97BF-86C8-EAC1-9FBC7A0B90D1" name="FK_ATPG_PGR">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>3416B4CA-ED12-E9A3-C625-8D4BD6875146</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C82692D-638A-FD4B-90B4-28886A16F681"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

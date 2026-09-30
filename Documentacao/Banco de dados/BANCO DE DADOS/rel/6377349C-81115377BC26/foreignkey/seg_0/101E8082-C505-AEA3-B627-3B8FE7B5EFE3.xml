@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="101E8082-C505-AEA3-B627-3B8FE7B5EFE3" containerWithKeyObject="693847E3-15AB-8D32-C320-CC14FFD6DD80" localFKIndex="C56DA9CF-A8F3-D602-258C-97615FA27944" name="FK_CRR_EAT">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>7847AC9F-241B-D8B5-13F2-632020C5AF90</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<referredTableLongName>PROFESSORES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1ABA1B66-EC71-94F9-17D1-191B1DA33819</referredTableID>
+<keyObject>545D3E73-6C09-C8C0-4E3C-2526D8C29498</keyObject>
+<referredKeyID>545D3E73-6C09-C8C0-4E3C-2526D8C29498</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>PRF_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

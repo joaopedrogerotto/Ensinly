@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1CCE7270-3A2F-2E3C-F0C4-44CD420D2840" name="AULAS">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>9A55550B-D8F7-FB17-A25A-C3C80A28D4CC</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="AUL_ID" id="93A83B8F-8261-1B1B-C6D8-7EF0A41A43EB">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>33FA9995-C70E-CA22-3B53-AB2A08634621</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AUL_DT_HR_INICIO" id="428CCFDC-5666-1220-13CD-A6F2B8529A46">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>25293E1D-F838-7BF8-D77E-1D3FA1EA0EC0</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AUL_DT_HR_FIM" id="62ADBA30-60EA-551A-3B8D-6F8C2CA01B46">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>25EA4B8A-9A12-2BEA-A241-9A22CE57AD59</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AUL_OBSERVACAO" id="6E697495-3D96-835F-7C7C-911CB0922E5D">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>17AF5872-1350-366C-6F85-FC27CFF97F86</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000</dataTypeSize>
+<ownDataTypeParameters>1000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AUL_ALU_ID" id="47E25D0B-80F9-3D69-824B-D2B71AE5C78E">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>FBD94C83-7737-E9B5-E0D1-14167D9DDE5F</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="33D244D7-AB9E-163D-11A4-E9A37899BD07" referredColumn="AD958F61-9CC3-F23C-2DF9-844656D65EF2"/>
+</associations>
+</Column>
+<Column name="AUL_PRF_ID" id="1D9E0CC6-AAFF-9A87-A3D8-612472E3B14F">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>5AC4C23E-A6A8-4035-6217-1E824E12EA21</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F2C4775C-5A28-AB8F-2B03-E615BDFB056E" referredColumn="7149A80A-B2F2-B97C-92AF-3B62FDAA5D55"/>
+</associations>
+</Column>
+<Column name="AUL_STA_ID" id="FFC2310A-BF95-2F56-0A5B-C2443F6F91D0">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>A15F8098-3F11-059F-00FC-464770467057</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="68911DF8-7F85-FA85-A340-395DF904F290" referredColumn="DB1A811A-79B3-9290-A5EB-4831BF71B1D0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="592A7B3F-BF25-03D2-1390-227291DD2585" name="PK_AUL">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>767D00E1-B288-4AA3-0601-F5ABF9F0FDC4</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="93A83B8F-8261-1B1B-C6D8-7EF0A41A43EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="474009A7-A9FF-2B4A-122E-A96DB762AA62" name="FK_AUL_ALU">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:09 UTC</createdTime>
+<generatorID>D1EC3232-8915-C6CA-53B2-AEA445410BEB</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47E25D0B-80F9-3D69-824B-D2B71AE5C78E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5D010086-778E-1752-1969-01D0609BF6F9" name="FK_AUL_STA">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>79BCCC18-6896-66F4-1F8B-A742175399DC</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FFC2310A-BF95-2F56-0A5B-C2443F6F91D0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C9A6D97B-A97B-1AA9-2BE6-813E79AE91F2" name="FK_AUL_PRF">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>916705E5-A983-44E3-8483-C38328103DFA</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D9E0CC6-AAFF-9A87-A3D8-612472E3B14F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

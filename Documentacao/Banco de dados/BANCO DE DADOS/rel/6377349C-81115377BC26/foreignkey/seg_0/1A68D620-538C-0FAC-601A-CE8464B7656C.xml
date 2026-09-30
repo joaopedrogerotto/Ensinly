@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1A68D620-538C-0FAC-601A-CE8464B7656C" containerWithKeyObject="440BF14D-04E6-7106-AB3C-7B9C07B82BEE" localFKIndex="A292B2DB-A619-75BC-BF64-82D0A5187DA5" name="PK_HCA_AUL">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>537C6ACC-17C0-D9E5-9396-C13E45FACEA0</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<referredTableLongName>AULAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1CCE7270-3A2F-2E3C-F0C4-44CD420D2840</referredTableID>
+<keyObject>592A7B3F-BF25-03D2-1390-227291DD2585</keyObject>
+<referredKeyID>592A7B3F-BF25-03D2-1390-227291DD2585</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>AUL_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

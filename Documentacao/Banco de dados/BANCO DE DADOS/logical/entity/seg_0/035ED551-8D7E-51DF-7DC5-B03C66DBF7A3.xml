@@ -78,6 +78,35 @@
 <dataTypeSize>1</dataTypeSize>
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ATV_AUL_ID" id="115D2F4B-E192-5119-C4F7-FB703FAAFDBC">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 11:38:03 UTC</createdTime>
+<generatorID>F28ED890-781D-6EEB-5A84-7D9A0821D46F</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>33FA9995-C70E-CA22-3B53-AB2A08634621</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="STV_ID" id="F09B50C3-D6BB-3E39-6D9C-6185A3AB94F7">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 12:33:39 UTC</createdTime>
+<generatorID>2834C4DD-0406-C164-F2B3-4C2986D832C0</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<referedAttribute>02EB5292-B1EE-950D-E061-8842992B060F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="4D48A87C-BBA8-C17D-34F1-7D6AB9D1BB5A" name="ATIVIDADES PK">

@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5DECC4C8-4825-1D97-A5F3-1FA64803704E" name="AULAS_MATERIAIS">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<ordsAlias>relation_9</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ALMT_AUL_ID" id="729A811B-437E-DD2D-61E4-B2A56882369D">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BBA09E8A-0F77-E10C-FEBE-6A5D2BBF919B" referredColumn="93A83B8F-8261-1B1B-C6D8-7EF0A41A43EB"/>
+</associations>
+</Column>
+<Column name="ALMT_MTR_ID" id="09CAFF21-E457-F7FD-9709-9A04DF4D56D2">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0C9B225D-FA18-32EC-F2D8-57D6C9DF9FA7" referredColumn="86CEA966-73AD-3612-61A6-69DF564FD0D0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8BB6A9BE-A990-215B-FB28-D4662F813952" name="PK_ALMT">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="729A811B-437E-DD2D-61E4-B2A56882369D"/>
+<colUsage columnID="09CAFF21-E457-F7FD-9709-9A04DF4D56D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7BEE1F1D-ED8C-1FC5-0C87-60A5A4161C4D" name="FK_ALMT_AUL">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>5DE0FA8D-348D-0028-DFCD-E5AEC8009308</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="729A811B-437E-DD2D-61E4-B2A56882369D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1BB11F60-3AC0-734A-4A5F-55557C7F943D" name="FK_ALMT_MTR">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>5DE0FA8D-348D-0028-DFCD-E5AEC8009308</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09CAFF21-E457-F7FD-9709-9A04DF4D56D2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

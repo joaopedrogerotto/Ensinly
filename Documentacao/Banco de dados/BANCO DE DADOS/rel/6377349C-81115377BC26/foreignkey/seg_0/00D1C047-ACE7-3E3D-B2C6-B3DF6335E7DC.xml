@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="00D1C047-ACE7-3E3D-B2C6-B3DF6335E7DC" containerWithKeyObject="597B5F0F-A614-7394-71D5-43783EFD6C79" localFKIndex="9C409B21-E09E-983B-B782-9AE7CE2C243A" name="FK_ATV_STV">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>2834C4DD-0406-C164-F2B3-4C2986D832C0</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<referredTableLongName>STATUS_ATIVIDADE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F0C7878E-8321-E7F0-B120-9D683F722F25</referredTableID>
+<keyObject>CAEE8DDC-6369-137E-8DE2-F31DC74EA9D6</keyObject>
+<referredKeyID>CAEE8DDC-6369-137E-8DE2-F31DC74EA9D6</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>STV_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

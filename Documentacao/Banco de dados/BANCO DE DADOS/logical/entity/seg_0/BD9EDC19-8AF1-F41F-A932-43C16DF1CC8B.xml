@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B4543234-450A-FA8B-4D63-E3BDAAEC6FC2" name="PROFESSORES">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BD9EDC19-8AF1-F41F-A932-43C16DF1CC8B" name="TIPOS_PERGUNTA">
 <createdBy>jp120</createdBy>
-<createdTime>2026-09-30 00:43:02 UTC</createdTime>
+<createdTime>2026-09-30 12:00:30 UTC</createdTime>
 <ownerDesignName>BANCO DE DADOS</ownerDesignName>
 <engineerTo>
 <item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="PRF_ID" id="BDB176DB-47D9-7409-E7A9-76FC25F421FD">
+<Attribute name="TPP_ID" id="783DD7F6-5B1E-92CD-DED0-4C83CA324FD0">
 <createdBy>jp120</createdBy>
-<createdTime>2026-09-30 00:43:11 UTC</createdTime>
+<createdTime>2026-09-30 12:01:01 UTC</createdTime>
 <ownerDesignName>BANCO DE DADOS</ownerDesignName>
 <engineerTo>
 <item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
@@ -27,9 +27,9 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="PRF_DESCRICAO" id="D27CC6F6-D33F-50DA-2C0B-8D117C06548D">
+<Attribute name="TPP_TIPO" id="98DC0E9A-8E54-4BE3-72BD-CE56D72DD9FD">
 <createdBy>jp120</createdBy>
-<createdTime>2026-09-30 00:43:35 UTC</createdTime>
+<createdTime>2026-09-30 12:01:08 UTC</createdTime>
 <ownerDesignName>BANCO DE DADOS</ownerDesignName>
 <engineerTo>
 <item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
@@ -37,35 +37,21 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>1000</dataTypeSize>
-<ownDataTypeParameters>1000,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="PRF_USU_ID" id="61081347-67EA-C5BB-0CB0-0C87133DEE60">
-<createdBy>jp120</createdBy>
-<createdTime>2026-09-30 00:44:24 UTC</createdTime>
-<generatorID>D366AAFF-AE94-1BCB-F033-53D040100DFA</generatorID>
-<ownerDesignName>BANCO DE DADOS</ownerDesignName>
-<engineerTo>
-<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
-</engineerTo>
-<referedAttribute>B0EC699D-3F25-90E0-1B54-301E6B80A764</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="F7108897-899C-D0CC-9077-59BF187B9930" name="PROFESSORES PK">
+<identifier id="8398D9E3-EDB7-878D-F6DE-561087610537" name="TIPOS_PERGUNTA PK">
 <createdBy>jp120</createdBy>
-<createdTime>2026-09-30 00:43:22 UTC</createdTime>
+<createdTime>2026-09-30 12:01:02 UTC</createdTime>
 <ownerDesignName>BANCO DE DADOS</ownerDesignName>
 <engineerTo>
 <item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>BDB176DB-47D9-7409-E7A9-76FC25F421FD</attributeRef>
+<attributeRef>783DD7F6-5B1E-92CD-DED0-4C83CA324FD0</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

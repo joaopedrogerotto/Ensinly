@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="487E4A82-C287-87B3-20DB-E2CEBA0731ED" containerWithKeyObject="9E076E32-EFF5-F772-B7C0-C6762D6B385F" localFKIndex="B51EA325-9992-D6E7-E755-2D151232C44A" name="FK_ALU_NVA">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>9DDF2210-3EF5-B31F-64B0-5C1296E2537D</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<referredTableLongName>NIVEIS_APRENDIZADO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>185573F4-2445-A67D-869A-2D6699BB2249</referredTableID>
+<keyObject>ADAAD1F3-8BD5-37BF-3C3F-96CB84EF544B</keyObject>
+<referredKeyID>ADAAD1F3-8BD5-37BF-3C3F-96CB84EF544B</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>NVA_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -54,7 +54,7 @@
 <dataTypeSize>1500</dataTypeSize>
 <ownDataTypeParameters>1500,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="MRT_URL" id="04961D76-1F18-2BA8-C9BA-2342048E2061">
+<Attribute name="MTR_URL" id="04961D76-1F18-2BA8-C9BA-2342048E2061">
 <createdBy>jp120</createdBy>
 <createdTime>2026-09-30 01:08:59 UTC</createdTime>
 <ownerDesignName>BANCO DE DADOS</ownerDesignName>

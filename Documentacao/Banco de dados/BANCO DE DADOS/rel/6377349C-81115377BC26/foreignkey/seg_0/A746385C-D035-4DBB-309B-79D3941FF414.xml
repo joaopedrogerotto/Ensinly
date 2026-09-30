@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A746385C-D035-4DBB-309B-79D3941FF414" containerWithKeyObject="6B43CB20-2E26-B5F9-2583-B0FD16F70285" localFKIndex="FD19D0B7-A883-7882-D914-D9A23D5F4F95" name="FK_MTMA_MAT">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>2A7C96C9-15C7-D404-3371-89CB6F966A82</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<referredTableLongName>MATERIAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>DEA3B017-3948-CE7D-81E3-401F4AB6746F</referredTableID>
+<keyObject>B80776C1-37F8-906E-4B0E-84F7BEA74D43</keyObject>
+<referredKeyID>B80776C1-37F8-906E-4B0E-84F7BEA74D43</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MAT_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

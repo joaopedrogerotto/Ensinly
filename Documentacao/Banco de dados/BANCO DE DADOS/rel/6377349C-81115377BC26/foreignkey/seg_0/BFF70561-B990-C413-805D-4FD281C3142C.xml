@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="BFF70561-B990-C413-805D-4FD281C3142C" containerWithKeyObject="0A74DB07-4D44-9D48-61CA-057A361F17F4" localFKIndex="A6F73E72-97BF-86C8-EAC1-9FBC7A0B90D1" name="FK_ATPG_PGR">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>3416B4CA-ED12-E9A3-C625-8D4BD6875146</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<referredTableLongName>PERGUNTAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>50195EF7-10AF-D85D-E91D-BA6D6779E5E5</referredTableID>
+<keyObject>D267A2EA-101C-0F63-D9C3-A9D776330E70</keyObject>
+<referredKeyID>D267A2EA-101C-0F63-D9C3-A9D776330E70</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>PGT_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

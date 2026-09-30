@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="894F079B-5AEE-60CD-AB77-AD687F4E112B" containerWithKeyObject="693847E3-15AB-8D32-C320-CC14FFD6DD80" localFKIndex="A3B2D5F8-CEA8-82D3-EF51-D8D3C1EFAEE9" name="FK_CRR_ATV">
+<createdBy>jp120</createdBy>
+<createdTime>2026-09-30 19:40:10 UTC</createdTime>
+<generatorID>769D9380-11FD-ECEC-4ED5-C71E34697080</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<referredTableLongName>ENTREGAS_ATIVIDADE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EA0A7132-D06F-E52C-6467-2DCCD5FABBFD</referredTableID>
+<keyObject>753911AD-EEDC-540F-4B50-8505D7249BD2</keyObject>
+<referredKeyID>753911AD-EEDC-540F-4B50-8505D7249BD2</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>EAT_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
