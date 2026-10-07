@@ -1,3 +1,8 @@
+using Ensinly.Server.DAO;
+using Ensinly.Server.DAO.Interfaces;
+using Ensinly.Server.Facade;
+using Ensinly.Server.Facade.Inteface;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +10,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.Services.AddSingleton<IDAODatabase, DAOSQLServer>();
+builder.Services.AddSingleton<IDAOUsuario, DAOUsuario>();
+
+builder.Services.AddSingleton<IFacadeUsuario, FacadeUsuario>();
+
 
 var app = builder.Build();
 
