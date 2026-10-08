@@ -13,8 +13,10 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddSingleton<IDAODatabase, DAOSQLServer>();
 builder.Services.AddSingleton<IDAOUsuario, DAOUsuario>();
+builder.Services.AddSingleton<IDAOAluno, DAOAluno>();
 
 builder.Services.AddSingleton<IFacadeUsuario, FacadeUsuario>();
+builder.Services.AddSingleton<IFacadeAluno, FacadeAluno>();
 
 
 var app = builder.Build();

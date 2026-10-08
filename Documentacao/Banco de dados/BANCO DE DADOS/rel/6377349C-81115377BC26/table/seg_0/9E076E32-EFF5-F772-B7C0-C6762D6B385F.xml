@@ -31,6 +31,18 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="ALU_TELEFONE" id="374F5D44-B264-7A14-F64B-6CF960FBFB59">
+<createdBy>jp120</createdBy>
+<createdTime>2026-10-07 11:38:04 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 <Column name="ALU_OBSERVACAO" id="B845CE6C-1057-1BBA-990D-966023531533">
 <createdBy>jp120</createdBy>
 <createdTime>2026-09-30 19:40:09 UTC</createdTime>

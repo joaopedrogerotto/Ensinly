@@ -39,6 +39,20 @@
 <logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ALU_TELEFONE" id="201E8833-A6E4-9AB3-D2A2-9FD630885C71">
+<createdBy>jp120</createdBy>
+<createdTime>2026-10-07 11:37:26 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="ALU_OBSERVACAO" id="DC470C6E-610D-912F-A948-14C77C8181C7">
 <createdBy>jp120</createdBy>
 <createdTime>2026-09-30 00:48:34 UTC</createdTime>
