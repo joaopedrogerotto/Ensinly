@@ -1,4 +1,5 @@
 ﻿using Ensinly.Server.DTO;
+using Ensinly.Server.Exceptions;
 using Ensinly.Server.Facade.Inteface;
 using Ensinly.Server.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -22,7 +23,10 @@ namespace Ensinly.Server.Controllers {
                     return Ok();
                 }
                 return BadRequest();
-            } catch (Exception ex) {
+            }
+            catch (EntityAlreadyExistsException ex) {
+                return Conflict(new { message = ex.Message });
+            }catch (Exception ex) {
                 return StatusCode(500, $"Erro ao cadastrar aluno: {ex.Message}");
             }
         }

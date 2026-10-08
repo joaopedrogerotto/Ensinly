@@ -1,4 +1,5 @@
 ﻿using Ensinly.Server.DAO.Interfaces;
+using Ensinly.Server.Exceptions;
 using Ensinly.Server.Models;
 using Microsoft.Data.SqlClient;
 using System.Data;
@@ -30,6 +31,8 @@ namespace Ensinly.Server.DAO {
                     }
                 }
 
+            }catch (SqlException sqlEx) when (sqlEx.Number == 2601 || sqlEx.Number == 2627) {
+                throw new EntityAlreadyExistsException($"Aluno já existe: {sqlEx.Message}");
             } catch (Exception ex) {
                 throw new Exception($"Erro ao inserir aluno: {ex.Message}", ex);
             }

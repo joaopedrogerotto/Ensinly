@@ -93,5 +93,15 @@
 <colUsage columnID="64E4CAC1-0D84-26F7-4BA2-5E5AE7AA9797"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="8F4C196A-41F9-6959-07C6-346FAF186CD4" name="UQ_USU_EMAIL">
+<createdBy>jp120</createdBy>
+<createdTime>2026-10-08 10:37:31 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3878C15A-AACB-D729-637A-ACF5B1159D9F"/>
+</indexColumnUsage>
+</ind_PK_UK>
 </indexes>
 </Table>

@@ -6,6 +6,7 @@
         public string Senha { get; set; }
         public DateTime DataCadastro{ get; set; }
         public bool Status { get; set; }
+        public string TipoUsuario { get; set; }
 
     }
 }
