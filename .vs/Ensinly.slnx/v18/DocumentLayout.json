@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Projetos\\Ensinly\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\dao\\daoaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\dao\\daoaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\dao\\daoaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\dao\\daoaluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\facade\\facadealuno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\facade\\facadealuno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\mapper\\alunomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\mapper\\alunomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\dto\\alunocreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,16 +27,8 @@
       "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\facade\\facadealuno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\facade\\facadealuno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\facade\\inteface\\ifacadealuno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\facade\\inteface\\ifacadealuno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\mapper\\alunomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\mapper\\alunomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\models\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Program.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Program.cs",
@@ -99,20 +99,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "AlunoMapper.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Mapper\\AlunoMapper.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Mapper\\AlunoMapper.cs",
               "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Mapper\\AlunoMapper.cs",
               "RelativeToolTip": "Ensinly.Server\\Mapper\\AlunoMapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-07T12:46:59.309Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AlunoCreateDTO.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\DTO\\AlunoCreateDTO.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\DTO\\AlunoCreateDTO.cs",
@@ -125,33 +125,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AlunoController.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Controllers\\AlunoController.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Controllers\\AlunoController.cs",
               "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Controllers\\AlunoController.cs",
               "RelativeToolTip": "Ensinly.Server\\Controllers\\AlunoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-07T12:38:53.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "FacadeAluno.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Facade\\FacadeAluno.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Facade\\FacadeAluno.cs",
               "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Facade\\FacadeAluno.cs",
               "RelativeToolTip": "Ensinly.Server\\Facade\\FacadeAluno.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-07T12:35:56.628Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "IFacadeAluno.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Facade\\Inteface\\IFacadeAluno.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Facade\\Inteface\\IFacadeAluno.cs",
@@ -177,13 +177,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "DAOAluno.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\DAO\\DAOAluno.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\DAO\\DAOAluno.cs",
               "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\DAO\\DAOAluno.cs",
               "RelativeToolTip": "Ensinly.Server\\DAO\\DAOAluno.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-07T12:29:34.781Z",
               "EditorCaption": ""

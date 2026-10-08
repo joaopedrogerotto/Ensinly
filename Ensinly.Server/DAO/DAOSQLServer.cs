@@ -8,9 +8,9 @@ namespace Ensinly.Server.DAO {
             _strConexao = configuration.GetConnectionString("DefaultConnection");
         }
 
-        public SqlConnection OpenConnection() {
+        public async Task<SqlConnection> OpenConnection() {
             var conn = new SqlConnection(_strConexao);
-            conn.Open();
+            await conn.OpenAsync();
             return conn;
         }
 

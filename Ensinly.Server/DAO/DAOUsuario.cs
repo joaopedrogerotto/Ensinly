@@ -10,7 +10,7 @@ namespace Ensinly.Server.DAO {
         }
         public async Task<bool> InsertUsuario(Models.Usuario usuario) {
             try {
-                using (var conn = _database.OpenConnection()) {
+                using (var conn = await _database.OpenConnection()) {
                     using (var command = new SqlCommand("PR_I_USUARIO", conn)) {
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@NOME", usuario.Nome);

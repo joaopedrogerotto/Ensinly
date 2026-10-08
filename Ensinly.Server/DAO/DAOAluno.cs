@@ -13,7 +13,7 @@ namespace Ensinly.Server.DAO {
 
         public async Task<bool> InsertAluno(Aluno aluno) {
             try {
-                using (SqlConnection conn = _database.OpenConnection()) {
+                using (SqlConnection conn = await _database.OpenConnection()) {
                     using (SqlCommand cmd = new SqlCommand("PR_I_ALUNO", conn)) {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@NOME", aluno.Nome);
