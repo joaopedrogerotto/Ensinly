@@ -1,0 +1,98 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f1f5f9;
+    font-family: Arial, sans-serif;
+}
+
+
+.main{
+    width: 380px;
+    padding: 35px 30px;
+    border: 1px solid black;
+    border-radius: 16px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.15);
+}
+
+.main img{
+    width: 160px;
+    margin-bottom: 10px;
+    mix-blend-mode: multiply;
+}
+
+.formLogin{
+    width: 100%;
+}
+
+.formLogin h1 {
+    margin-bottom: 25px;
+
+    color: #0f172a;
+    font-size: 28px;
+}
+
+.inputEmail,
+.inputPassword {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.inputEmail label,
+.inputPassword label {
+    margin-bottom: 6px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.inputEmail input,
+.inputPassword input {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.inputEmail input:focus,
+.inputPassword input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.formLogin button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.formLogin button:hover {
+    background-color: #1d4ed8;
+}
+
+.errorLogin{
+    padding: 5px;
+    color: #f74646;
+    font-size: 1rem;
+}

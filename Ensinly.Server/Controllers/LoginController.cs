@@ -14,17 +14,25 @@ namespace Ensinly.Server.Controllers {
 
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] LoginDTO login) {
-            if(login.Email == null || login.Senha == null) {
-                return BadRequest("Email e/ou senha inválido");
+            try {
+                if (login.Email == null || login.Senha == null) {
+                    return BadRequest("Email e/ou senha inválido.");
+                }
+
+                var usuario = await _facadeLogin.ValidarLogin(login);
+
+                if (usuario == null) {
+                    return Unauthorized("Falha ao realizar login.");
+                }
+
+                if (string.IsNullOrEmpty(usuario.Email)) {
+                    return Unauthorized("Email e/ou senha inválido.");
+                }
+                return Ok(usuario);
+
+            } catch (Exception ex) {
+                return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
             }
-
-            var usuario = await _facadeLogin.ValidarLogin(login);
-
-            if (usuario == null) {
-                return Unauthorized();
-            }
-
-            return Ok(usuario);
         }
     }
 }
