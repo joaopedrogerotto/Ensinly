@@ -1,5 +1,6 @@
 import React, { useState} from "react";
 import style from "./Login.module.css"
+import { useNavigate } from "react-router-dom";
 
 interface LoginRequest{
   Email: string,
@@ -10,6 +11,7 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   async function handleLogin(event: React.SubmitEvent) {
     event.preventDefault();
@@ -27,11 +29,7 @@ export default function Login() {
     });
     
     if(response.ok){
-      alert('Login efetuado');
-      const data = response.json();
-      setError("");
-      console.log(data);
-      //Salvar login;
+        navigate("/home", {replace: true});
     }else{
       const message = await response.text();
       setError(message || "Email e/ou senha inválidos.");
@@ -40,7 +38,7 @@ export default function Login() {
 
   return (
     <main className={style.main}>
-      <img src="../../public/Ensinly_Logo.png" alt="Ensinly Logo" />
+      <img src="/Ensinly_Logo.png" alt="Ensinly Logo" />
       <form onSubmit={handleLogin} className={style.formLogin}>
         <h1>Login</h1>
         
