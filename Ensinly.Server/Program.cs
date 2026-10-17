@@ -2,6 +2,7 @@ using Ensinly.Server.DAO;
 using Ensinly.Server.DAO.Interfaces;
 using Ensinly.Server.Facade;
 using Ensinly.Server.Facade.Inteface;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,24 @@ builder.Services.AddSingleton<IFacadeAluno, FacadeAluno>();
 builder.Services.AddSingleton<IFacadeLogin, FacadeLogin>();
 builder.Services.AddSingleton<IFacadeProfessor, FacadeProfessor>();
 
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(op => {
+    op.Cookie.Name = "session";
+    op.Cookie.HttpOnly = true;
+    op.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+    op.Cookie.SameSite = SameSiteMode.Lax;
+    op.ExpireTimeSpan = TimeSpan.FromHours(12);
+    op.SlidingExpiration = true;
+
+    op.Events.OnRedirectToLogin = ctx =>{
+        ctx.Response.StatusCode = StatusCodes.Status401Unauthorized;
+        return Task.CompletedTask;
+    };
+    op.Events.OnRedirectToAccessDenied = ctx =>{
+        ctx.Response.StatusCode = StatusCodes.Status403Forbidden;
+        return Task.CompletedTask;
+    };
+});
+
 
 var app = builder.Build();
 
@@ -34,6 +53,8 @@ if (app.Environment.IsDevelopment()) {
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

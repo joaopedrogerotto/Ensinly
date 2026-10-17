@@ -1,6 +1,9 @@
 ﻿using Ensinly.Server.DTO;
 using Ensinly.Server.Facade.Inteface;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Ensinly.Server.Controllers {
     [ApiController]
@@ -28,6 +31,18 @@ namespace Ensinly.Server.Controllers {
                 if (string.IsNullOrEmpty(usuario.Email)) {
                     return Unauthorized("Email e/ou senha inválido.");
                 }
+
+                var claims = new List<Claim> {
+                    new Claim(ClaimTypes.Name, usuario.Nome),
+                    new Claim(ClaimTypes.Email, usuario.Email)
+                };
+
+                var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                var principal = new ClaimsPrincipal(identity);
+
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
                 return Ok(usuario);
 
             } catch (Exception ex) {
