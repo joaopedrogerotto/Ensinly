@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Projetos\\Ensinly\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\dao\\daologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\dao\\daologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,29 +46,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Program.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Program.cs",
               "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Program.cs",
               "RelativeToolTip": "Ensinly.Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwD4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T23:46:58.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T23:46:58.768Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "DAOLogin.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\DAO\\DAOLogin.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\DAO\\DAOLogin.cs",
               "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\DAO\\DAOLogin.cs",
               "RelativeToolTip": "Ensinly.Server\\DAO\\DAOLogin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T14:06:47.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T14:06:47.377Z"
             },
             {
               "$type": "Document",
@@ -78,10 +76,9 @@
               "RelativeDocumentMoniker": "Ensinly.Server\\Controllers\\LoginController.cs",
               "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Ensinly.Server\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAiwDMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T13:47:26.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T13:47:26.405Z"
             }
           ]
         }
