@@ -1,7 +1,6 @@
 import { FaCalendar, FaHome, FaSchool, FaStickyNote, FaUser, FaUserGraduate, FaVideo } from "react-icons/fa";
 import style from "./Navbar.module.css"
 import { useAuth } from "../../Context/AuthContext";
-import { FaPerson } from "react-icons/fa6";
 
 export default function Navbar(){
     const {user} = useAuth();
