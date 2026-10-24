@@ -1,6 +1,7 @@
 import React, { useState} from "react";
 import style from "./Login.module.css"
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../Context/AuthContext";
 
 interface LoginRequest{
   Email: string,
@@ -12,6 +13,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const {setUser} = useAuth();
 
   async function handleLogin(event: React.SubmitEvent) {
     event.preventDefault();
@@ -30,6 +32,8 @@ export default function Login() {
     });
     
     if(response.ok){
+        const usuario = await response.json();
+        setUser(usuario);
         navigate("/home", {replace: true});
     }else{
       const message = await response.text();
