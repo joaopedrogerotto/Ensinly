@@ -17,11 +17,13 @@ builder.Services.AddSingleton<IDAOUsuario, DAOUsuario>();
 builder.Services.AddSingleton<IDAOAluno, DAOAluno>();
 builder.Services.AddSingleton<IDAOLogin, DAOLogin>();
 builder.Services.AddSingleton<IDAOProfessor, DAOProfessor>();
+builder.Services.AddSingleton<IDAONivelAprendizado, DAONivelAprendizado>();
 
 builder.Services.AddSingleton<IFacadeUsuario, FacadeUsuario>();
 builder.Services.AddSingleton<IFacadeAluno, FacadeAluno>();
 builder.Services.AddSingleton<IFacadeLogin, FacadeLogin>();
 builder.Services.AddSingleton<IFacadeProfessor, FacadeProfessor>();
+builder.Services.AddSingleton<IFacadeNivelAprendizado, FacadeNivelAprendizado>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(op => {
     op.Cookie.Name = "session";
