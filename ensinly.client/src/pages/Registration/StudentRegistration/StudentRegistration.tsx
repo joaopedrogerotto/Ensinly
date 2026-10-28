@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "./StudentRegistration.module.css"
+import { useNavigate } from "react-router-dom";
 
 interface NivelAprendizado {
     id: number;
@@ -18,6 +19,8 @@ export default function CadastroAluno() {
     const [niveis, setNiveis] = useState<NivelAprendizado[]>([]);
 
     const [senhasIguais, setSenhasIguais] = useState("");
+
+    const navigate = useNavigate();
 
     //Dados Aluno
     const [nome, setNome] = useState("");
@@ -61,7 +64,7 @@ export default function CadastroAluno() {
         });
             
         if(response.ok){
-            console.log("Aluno cadastrado");
+            navigate("/login", {replace: true, state: {email: alunoRequest.Email}});
         }else{
             console.log(await response.text());
         }
