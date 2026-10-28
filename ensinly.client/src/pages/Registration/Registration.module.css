@@ -1,0 +1,32 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f1f5f9;
+    font-family: Arial, sans-serif;
+}
+
+
+.main{
+    width: 380px;
+    padding: 35px 30px;
+    border: 1px solid black;
+    border-radius: 16px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.15);
+}
+
+.groupInputRadio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

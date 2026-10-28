@@ -1,0 +1,95 @@
+css
+.formGroup {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 2rem;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.form {
+    width: 100%;
+    max-width: 900px;
+    background: transparent;
+    border-radius: 16px;
+    box-shadow: none;
+    font-family: Arial, sans-serif;
+}
+
+.title{
+    margin: 1.5rem 0;
+    font-size: 1.6rem;
+    color: #1e3a8a;
+}
+
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom:1.25rem;
+    flex:1;
+}
+
+.rox{
+    display: flex;
+    gap: 1rem;
+}
+
+.inputGroup label{
+    font-size: 0.95rem;
+    font-weight: 600;
+    color:#374151;
+}
+
+.inputGroup input,
+.inputGroup select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
+}
+
+.button{
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    background: #1e3a8a;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s, transform 0.1s;
+}
+
+.button:hover {
+    background: #1d4ed8;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.errorMessage {
+    color: #dc2626;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

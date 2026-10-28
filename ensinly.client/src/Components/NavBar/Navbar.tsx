@@ -1,9 +1,11 @@
 import { FaCalendar, FaHome, FaSchool, FaStickyNote, FaUser, FaUserGraduate, FaVideo } from "react-icons/fa";
 import style from "./Navbar.module.css"
 import { useAuth } from "../../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar(){
     const {user} = useAuth();
+    const navigate = useNavigate();
 
     let menu;
 
@@ -47,7 +49,7 @@ export default function Navbar(){
                     <FaVideo/>
                     Aula
                 </li>
-                <li>
+                <li onClick={() => navigate("/aluno/cadastrar")}>
                     <FaUserGraduate/>
                     Alunos
                 </li>

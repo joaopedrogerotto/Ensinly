@@ -96,3 +96,22 @@ body{
     color: #f74646;
     font-size: 1rem;
 }
+
+.groupBtnLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.groupBtnLogin a{
+    cursor: pointer;
+    color: #2563eb;
+    transition: .5s;
+}
+
+.groupBtnLogin a:hover{
+    color: #1240be;
+    transition: .5s;
+}

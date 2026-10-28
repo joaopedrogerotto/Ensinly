@@ -61,7 +61,11 @@ export default function Login() {
           <p>{error}</p>
         </div>
 
-        <button type="submit">Entrar</button>
+        <div className={style.groupBtnLogin}>
+          <p>Não possui Login? <a href={style.linkRegister} onClick={() => navigate("/Registration/Registration")}>Cadastrar-se</a></p>
+          
+          <button type="submit">Entrar</button>
+        </div>
       </form>
     </main>    
   );
