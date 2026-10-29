@@ -2,9 +2,12 @@ import React, {useState } from "react";
 import style from "./Registration.module.css";
 import StudentRegistration from "./StudentRegistration/StudentRegistration";
 import TeacherRegistration from "./TeacherRegistration/TeacherRegistration";
+import { useNavigate } from "react-router-dom";
 
 export default function Cadastro(){
     const [form, setForm] = useState<"A" | "B" | "">("");
+
+    const navigate = useNavigate();
 
     const typesForm = {
         A: StudentRegistration,
@@ -24,9 +27,13 @@ export default function Cadastro(){
     return(
         <div className={style.page}>
             <main className={style.main}>
+                <button type="button" className={style.backButton} aria-label="Voltar para seleção de cadastro" onClick={() => navigate("/login")}>
+                    &#8592; Voltar
+                </button>
+
                 <img src="/Ensinly_Logo.png" alt="Ensinly Logo" />
                 <h1>Registro</h1>
-
+                
                 <fieldset className={style.fieldset}>
                     <legend>Qual seu tipo de registro?</legend>
                     <div className={style.groupInputRadio} onChange={handleChange}>

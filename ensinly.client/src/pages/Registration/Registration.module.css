@@ -33,6 +33,28 @@ h1 {
     font-size: 28px;
 }
 
+.backButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 8px 0;
+
+    background: transparent;
+    border: none;
+    color: #2563eb;
+
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.backButton:hover {
+    color: #0349e0;
+}
+
 .fieldset {
     border: none;
     padding: 0;
