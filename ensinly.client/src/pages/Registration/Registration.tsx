@@ -20,22 +20,29 @@ export default function Cadastro(){
     const FormComponent = form ? typesForm[form] : null;
 
     return(
-        <main className={style.main}>
-            <h1>Registro</h1>
-            <p>Qual seu tipo de registro?</p>
-            <div className={style.groupInputRadio} onChange={handleChange}>
-                <div className={style.inputRadio}>
-                    <input type="radio" name="typeRegister" id="typeStudent" value="student"/>
-                    <label>Aluno</label>
+        <div className={style.page}>
+            <main className={style.main}>
+                <img src="/Ensinly_Logo.png" alt="Ensinly Logo" />
+                <h1>Registro</h1>
+                <p>Qual seu tipo de registro?</p>
+                <div className={style.groupInputRadio} onChange={handleChange}>
+                    <div className={style.inputRadio}>
+                        <input type="radio" name="typeRegister" id="typeStudent" value="student"/>
+                        <label>Aluno</label>
+                    </div>
+                    <div className={style.inputRadio}>
+                        <input type="radio" name="typeRegister" id="typeRegister" value="teacher"/>
+                        <label>Professor</label>
+                    </div>
                 </div>
-                <div className={style.inputRadio}>
-                    <input type="radio" name="typeRegister" id="typeRegister" value="teacher"/>
-                    <label>Professor</label>
-                </div>
-            </div>
-            
-            {FormComponent && <FormComponent />}
-        </main>
+                
+                {FormComponent && (
+                    <div className={style.modalAnimation} key={form}>
+                        <FormComponent />
+                    </div>
+                )}
+            </main>
+        </div>
 
 
     )
