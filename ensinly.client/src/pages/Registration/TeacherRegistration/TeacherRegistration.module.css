@@ -1,0 +1,146 @@
+.formGroup {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem 0 0;
+    box-sizing: border-box;
+}
+
+.form {
+    width: 100%;
+    max-width: 900px;
+    background: transparent;
+    border-radius: 16px;
+    box-shadow: none;
+    font-family: Arial, sans-serif;
+}
+
+.title{
+    margin: 1.5rem 0;
+    font-size: 1.6rem;
+    color: #1e3a8a;
+}
+
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom:1.25rem;
+    flex:1;
+}
+
+.rox{
+    display: flex;
+    gap: 1rem;
+}
+
+.inputGroup label{
+    font-size: 0.95rem;
+    font-weight: 600;
+    color:#374151;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
+}
+
+.inputGroup textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.button{
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    background: #1e3a8a;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s, transform 0.1s;
+}
+
+.button:hover {
+    background: #1d4ed8;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.errorMessage {
+    color: #dc2626;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.groupMaterias {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: .8rem;
+    margin-bottom: 10px;
+}
+
+.groupMaterias p {
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px;
+    background: #f3f1f1;
+}
+
+.cardMateria {
+    position: relative;
+}
+
+.removeButton {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: #dc2626;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardMateria p {
+    margin: 0;
+    border-radius: 10px;
+    padding: 10px;
+    background: #f3f1f1;
+}
+
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

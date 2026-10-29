@@ -1,19 +1,21 @@
 import React, {useState } from "react";
 import style from "./Registration.module.css";
 import StudentRegistration from "./StudentRegistration/StudentRegistration";
+import TeacherRegistration from "./TeacherRegistration/TeacherRegistration";
 
 export default function Cadastro(){
-    const [form, setForm] = useState<"A" | "">("");
+    const [form, setForm] = useState<"A" | "B" | "">("");
 
     const typesForm = {
-        A: StudentRegistration
+        A: StudentRegistration,
+        B: TeacherRegistration
     }
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>{
         if(event.target.value === "student"){
             setForm('A')
         }else if(event.target.value === "teacher"){
-            setForm('');//mudar para professor
+            setForm('B');        
         }
     }
 
