@@ -33,6 +33,52 @@ h1 {
     font-size: 28px;
 }
 
+.fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.fieldset legend {
+    width: 100%;
+    margin-bottom: 12px;
+    color: #475569;
+    font-size: 15px;
+}
+
+.groupInputRadio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #0f172a;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.option:hover {
+    border-color: #94a3b8;
+}
+
+.option:has(input:checked) {
+    border-color: #2563eb;
+    background-color: #eff6ff;
+}
+
+.option:has(input:focus-visible) {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
 .groupInputRadio{
     display: flex;
     justify-content: center;
