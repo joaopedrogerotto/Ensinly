@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import style from "./TeacherRegistration.module.css"
-import { replace, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface Materia{
     id: number;
@@ -45,7 +45,7 @@ export default function TeacherRegistration() {
     async function postProfessor(event: React.SubmitEvent){
         event.preventDefault();
         
-        const profRequest = {
+        const profRequest:ProfessorRequest = {
             Nome: nome,
             Email: email,
             Senha: senha,
