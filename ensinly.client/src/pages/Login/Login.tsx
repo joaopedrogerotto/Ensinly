@@ -45,7 +45,9 @@ export default function Login() {
 
   return (
     <main className={style.main}>
-      <img src="/Ensinly_Logo.png" alt="Ensinly Logo" />
+      <header className={style.brand}>
+        <img src="/Ensinly_Logo.png" alt="Ensinly Logo" />
+      </header>
       <form onSubmit={handleLogin} className={style.formLogin}>
         <h1>Login</h1>
         
@@ -59,9 +61,12 @@ export default function Login() {
           <input type="password" name="loginPwd" id="loginPwd" value={password} required onChange={(e) => setPassword(e.target.value)}/>
         </div>
 
-        <div className={style.errorLogin} id="errorLogin">
-          <p>{error}</p>
-        </div>
+        {error && (
+          <div className={style.errorLogin} id="errorLogin">
+            <p>{error}</p>
+          </div>
+        )}
+
 
         <div className={style.groupBtnLogin}>
           <p>Não possui Login? <a href={style.linkRegister} onClick={() => navigate("/Registration/Registration")}>Cadastrar-se</a></p>
