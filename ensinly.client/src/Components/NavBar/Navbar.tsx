@@ -49,7 +49,7 @@ export default function Navbar(){
                     <FaVideo/>
                     Aula
                 </li>
-                <li onClick={() => navigate("/aluno/cadastrar")}>
+                <li onClick={() => navigate("/professor/meusAlunos")}>
                     <FaUserGraduate/>
                     Alunos
                 </li>

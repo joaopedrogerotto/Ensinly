@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import { AuthProvider } from "./Context/AuthContext";
 import CadastroAluno from "./pages/Registration/StudentRegistration/StudentRegistration";
 import Registration from "./pages/Registration/Registration";
+import MyStudents from "./pages/MyStudents/MyStudents";
 
 export default function App() { 
     return(
@@ -15,6 +16,7 @@ export default function App() {
                         <Route path="/home" element={<Home/>}/>
                         <Route path="/aluno/cadastrar" element={<CadastroAluno/>}/>
                         <Route path="/registration/registration" element={<Registration/>}/>
+                        <Route path="/professor/meusAlunos" element={<MyStudents/>}/>
                         <Route path="*" element={<Navigate to="/login" replace />} />
                     </Routes>
                 </AuthProvider>
