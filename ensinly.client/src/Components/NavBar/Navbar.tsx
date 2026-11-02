@@ -1,12 +1,13 @@
 import { FaCalendar, FaHome, FaSchool, FaStickyNote, FaUser, FaUserGraduate, FaVideo } from "react-icons/fa";
 import style from "./Navbar.module.css"
 import { useAuth } from "../../Context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar(){
     const {user} = useAuth();
     const navigate = useNavigate();
-
+    const location = useLocation();
+    
     let menu;
 
     if(user?.tipoUsuario === "ALUNO"){
@@ -29,7 +30,10 @@ export default function Navbar(){
     }else if(user?.tipoUsuario === "PROFESSOR"){
         menu = (
             <>
-                <li className={style.active}>
+                <li 
+                    onClick={() => navigate("/home")}
+                    className={location.pathname === "/home" ? style.active : ""}
+                >
                     <FaHome />
                     Home
                 </li>
@@ -49,7 +53,10 @@ export default function Navbar(){
                     <FaVideo/>
                     Aula
                 </li>
-                <li onClick={() => navigate("/professor/meusAlunos")}>
+                <li 
+                    onClick={() => navigate("/professor/meusAlunos")}
+                    className={location.pathname === "/professor/meusAlunos" ? style.active : ""}
+                >
                     <FaUserGraduate/>
                     Alunos
                 </li>
