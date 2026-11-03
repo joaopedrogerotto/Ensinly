@@ -1,0 +1,30 @@
+.sreachBar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+}
+
+.sreachBar label {
+    font-size: 1rem;
+    color: #1f2937;
+}
+
+.input {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.15);
+}
+
+.sreachBarStudents {
+    height: 56px;
+    margin-top: 32px;
+    margin-right: 32px;
+}

@@ -54,8 +54,8 @@ export default function Navbar(){
                     Aula
                 </li>
                 <li 
-                    onClick={() => navigate("/professor/meusAlunos")}
-                    className={location.pathname === "/professor/meusAlunos" ? style.active : ""}
+                    onClick={() => navigate("/professor/alunos")}
+                    className={location.pathname === "/professor/alunos" ? style.active : ""}
                 >
                     <FaUserGraduate/>
                     Alunos

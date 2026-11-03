@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../Context/AuthContext";
-import Navbar from "../../Components/NavBar/Navbar";
 import style from "./MyStudents.module.css"
 
 interface AlunoResponse{
@@ -36,10 +35,8 @@ export default function MyStudents(){
     },[])
 
     return(
-        <>
-            <Navbar/>   
+        <>   
             <div className={style.page}>
-                <h1 className={style.title}>Meus Alunos</h1>
                 <div className={style.tableWrapper}>
                     <table className={style.tableStudents}>
                         <thead className={style.tableHead}>
