@@ -16,7 +16,7 @@ namespace Ensinly.Server.Controllers {
 
 
         [HttpPost]
-        public async Task<IActionResult> CadastrarAluno([FromBody] AlunoCreateDTO dto) {
+        public async Task<IActionResult> PostAluno([FromBody] AlunoCreateDTO dto) {
             try {
                 var result = await _facadeAluno.CadastrarAluno(dto);
                 if (result) {

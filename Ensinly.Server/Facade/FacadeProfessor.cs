@@ -16,3 +16,4 @@ namespace Ensinly.Server.Facade {
         public async Task<List<AlunoResponseDTO>> SelecionaAlunosPorProfessor(int idUsuario) => await _daoProfessor.SelectAlunosByProfessor(idUsuario);
     }
 }
+ 
