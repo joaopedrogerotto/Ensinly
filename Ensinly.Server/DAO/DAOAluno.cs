@@ -1,4 +1,6 @@
 ﻿using Ensinly.Server.DAO.Interfaces;
+using Ensinly.Server.DTO;
+using Ensinly.Server.Enums;
 using Ensinly.Server.Exceptions;
 using Ensinly.Server.Models;
 using Microsoft.Data.SqlClient;
@@ -35,6 +37,35 @@ namespace Ensinly.Server.DAO {
                 throw new EntityAlreadyExistsException($"Aluno já existe: {sqlEx.Message}");
             } catch (Exception ex) {
                 throw new Exception($"Erro ao inserir aluno: {ex.Message}", ex);
+            }
+        }
+
+        public async Task<AlunoResponseDTO> SelectByEmail(string email) {
+            try {
+                var alunoResponse = new AlunoResponseDTO();
+                using (SqlConnection conn = await _database.OpenConnection()) {
+                    using (SqlCommand cmd = new SqlCommand("PR_S_ALUNO_POR_EMAIL", conn)) {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@EMAIL", email);
+                        using (SqlDataReader reader = await cmd.ExecuteReaderAsync()) {
+                            if (await reader.ReadAsync()) {
+                                alunoResponse.IdUsuario = reader.GetInt32(reader.GetOrdinal("USU_ID"));
+                                alunoResponse.Nome = reader.GetString(reader.GetOrdinal("USU_NOME"));
+                                alunoResponse.Email = reader.GetString(reader.GetOrdinal("USU_EMAIL"));
+                                alunoResponse.Observacao = reader.IsDBNull(reader.GetOrdinal("ALU_OBSERVACAO")) ? null : reader.GetString(reader.GetOrdinal("ALU_OBSERVACAO"));
+                                alunoResponse.Telefone = reader.IsDBNull(reader.GetOrdinal("ALU_TELEFONE")) ? null : reader.GetString(reader.GetOrdinal("ALU_TELEFONE"));
+                                alunoResponse.DataNascimento = reader.GetDateTime(reader.GetOrdinal("ALU_DT_NASCIMENTO"));
+                                alunoResponse.NivelAprendizado = ((NivelAprendizadoEnum)reader.GetInt32(reader.GetOrdinal("NVA_ID"))).ToString();
+                                alunoResponse.Status = reader.GetBoolean(reader.GetOrdinal("USU_STATUS"));
+                            } else {
+                                throw new EntityNotFoundException($"Aluno com email '{email}' não encontrado.");
+                            }
+                        }
+                    }
+                }
+                return alunoResponse;
+            } catch (Exception ex){
+                throw new Exception($"Erro ao selecionar aluno por email: {ex.Message}", ex);
             }
         }
     }

@@ -23,11 +23,26 @@ namespace Ensinly.Server.Controllers {
                     return Ok();
                 }
                 return BadRequest();
-            }
-            catch (EntityAlreadyExistsException ex) {
+            } catch (EntityAlreadyExistsException ex) {
                 return Conflict(new { message = ex.Message });
-            }catch (Exception ex) {
+            } catch (Exception ex) {
                 return StatusCode(500, $"Erro ao cadastrar aluno: {ex.Message}");
+            }
+        }
+
+        [HttpGet("{emailAluno}")]
+        public async Task<IActionResult> GetAlunoByEmail(string emailAluno) {
+            if(String.IsNullOrEmpty(emailAluno)) {
+                return BadRequest("Email do aluno é obrigatório.");
+            }
+
+            try {
+                var aluno = await _facadeAluno.SelecionarPorEmail(emailAluno);
+                return Ok(aluno);
+            } catch (EntityNotFoundException ex) {
+                return NotFound(new { message = ex.Message });
+            } catch (Exception ex) {
+                return StatusCode(500, $"Erro ao selecionar aluno por email: {ex.Message}");
             }
         }
     }

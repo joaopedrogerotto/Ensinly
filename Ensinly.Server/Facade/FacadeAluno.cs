@@ -16,5 +16,7 @@ namespace Ensinly.Server.Facade {
             var aluno = AlunoMapper.ToEntidade(alunoCreateDTO);
             return await _daoAluno.InsertAluno(aluno);
         }
+
+        public async Task<AlunoResponseDTO> SelecionarPorEmail(string email) => await _daoAluno.SelectByEmail(email);
     }
 }
