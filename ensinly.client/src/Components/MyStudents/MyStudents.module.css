@@ -1,9 +1,8 @@
 .page {
-    margin-left: 240px;
-    min-height: 100vh;
-    padding: 32px;
-    background-color: #f1f5fb;
-    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 24px 0 0;
+    min-height: auto;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -16,6 +15,7 @@
 }
 
 .tableWrapper {
+    width: 100%;
     overflow-x: auto;
     background-color: #fff;
     border-radius: 10px;
@@ -61,9 +61,9 @@
     border-bottom: none;
 }
 
-.tableStudents tbody tr:hover {
+/* .tableStudents tbody tr:hover {
     background-color: rgba(30, 58, 138, 0.08);
-}
+} */
 
 .notInformed {
     color: #94a3b8;

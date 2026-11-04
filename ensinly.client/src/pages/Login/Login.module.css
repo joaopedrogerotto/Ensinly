@@ -1,14 +1,13 @@
-html, body {
-    height: 100%;
-    margin: 0;
+body{
+    font-family: Arial, sans-serif;
 }
 
-body {
+.page {
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #f1f5fb;
-    font-family: Arial, sans-serif;
 }
 
 .main {

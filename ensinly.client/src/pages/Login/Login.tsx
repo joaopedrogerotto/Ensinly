@@ -44,36 +44,38 @@ export default function Login() {
   }
 
   return (
-    <main className={style.main}>
-      <header className={style.brand}>
-        <img src="/Ensinly_Logo.png" alt="Ensinly Logo" />
-      </header>
-      <form onSubmit={handleLogin} className={style.formLogin}>
-        <h1>Login</h1>
-        
-        <div className={style.inputEmail}>
-          <label htmlFor="loginEmail">Email:</label>
-          <input type="email" name="loginEmail" id="loginEmail" value={email} required onChange={(e) => setEmail(e.target.value)}/>
-        </div>
-
-        <div className={style.inputPassword}>
-          <label htmlFor="loginPwd">Senha:</label>
-          <input type="password" name="loginPwd" id="loginPwd" value={password} required onChange={(e) => setPassword(e.target.value)}/>
-        </div>
-
-        {error && (
-          <div className={style.errorLogin} id="errorLogin">
-            <p>{error}</p>
-          </div>
-        )}
-
-
-        <div className={style.groupBtnLogin}>
-          <p>Não possui Login? <a href={style.linkRegister} onClick={() => navigate("/Registration/Registration")}>Cadastrar-se</a></p>
+    <div className={style.page}>
+      <main className={style.main}>
+        <header className={style.brand}>
+          <img src="/Ensinly_Logo.png" alt="Ensinly Logo" />
+        </header>
+        <form onSubmit={handleLogin} className={style.formLogin}>
+          <h1>Login</h1>
           
-          <button type="submit">Entrar</button>
-        </div>
-      </form>
-    </main>    
+          <div className={style.inputEmail}>
+            <label htmlFor="loginEmail">Email:</label>
+            <input type="email" name="loginEmail" id="loginEmail" value={email} required onChange={(e) => setEmail(e.target.value)}/>
+          </div>
+
+          <div className={style.inputPassword}>
+            <label htmlFor="loginPwd">Senha:</label>
+            <input type="password" name="loginPwd" id="loginPwd" value={password} required onChange={(e) => setPassword(e.target.value)}/>
+          </div>
+
+          {error && (
+            <div className={style.errorLogin} id="errorLogin">
+              <p>{error}</p>
+            </div>
+          )}
+
+
+          <div className={style.groupBtnLogin}>
+            <p>Não possui Login? <a href={style.linkRegister} onClick={() => navigate("/Registration/Registration")}>Cadastrar-se</a></p>
+            
+            <button type="submit">Entrar</button>
+          </div>
+        </form>
+      </main> 
+    </div>   
   );
 }

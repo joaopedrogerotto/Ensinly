@@ -4,14 +4,17 @@ interface SreachBarProps{
     labelText: string
     placeholder:string,
     classStyleName: string,
-
+    textButton: string,
+    functionSreach: () => void,
+    functionSetAttribute: (termSreach: string) => void
 }
 
-export default function SreachBar({labelText, placeholder, classStyleName}: SreachBarProps){
+export default function SreachBar({labelText, placeholder, classStyleName, textButton, functionSreach, functionSetAttribute}: SreachBarProps){
     return(
         <div className={`${style.sreachBar} ${style[classStyleName]}`}> 
             <label htmlFor={classStyleName}>{labelText}</label>
-            <input type="text" id={classStyleName} placeholder={placeholder} className={style.input}/>
+            <input type="text" id={classStyleName} placeholder={placeholder} className={style.input} onChange={(e) => functionSetAttribute(e.target.value)}/>
+            <button onClick={() => functionSreach()}>{textButton}</button>
         </div>
     );
 }
