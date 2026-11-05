@@ -20,14 +20,32 @@ interface AlunoResponse{
     status: boolean;
 };
 
+interface MaiorNivelAprendizadoResponse{
+    totalAlunos: number;
+    totalAlunosNivel: number;
+    nivel: string;
+};
+
 export default function Students(){
     const [emailAluno, setEmailAluno] = useState("");
     const [aluno, setAluno] = useState<AlunoResponse>();
     const [quantidadeAlunos, setQuantidadeAluno] = useState(0);
+    const [maiorNivelAprendizado, setMaiorNivelAprendizado] = useState<MaiorNivelAprendizadoResponse>();
     const {user} = useAuth();
 
+    function createStatNivel(){
+        if (!maiorNivelAprendizado) {
+            return "Carregando...";
+        }
 
-    async function getStundentByEmail(){
+        const {totalAlunos, totalAlunosNivel} = maiorNivelAprendizado;
+        
+        const percentage = totalAlunos > 0 ? (totalAlunosNivel * 100) / totalAlunosNivel : 0;
+
+        return `${maiorNivelAprendizado.totalAlunosNivel} de ${maiorNivelAprendizado.totalAlunos} alunos (${percentage}%)`
+    }
+
+    async function getAlunoByEmail(){
         const response = await fetch(`/api/aluno/${emailAluno}`);
 
         if(!response.ok){
@@ -52,8 +70,21 @@ export default function Students(){
         setQuantidadeAluno(data);
     }
 
+    async function getMaiorNivelAprendizado() {
+        const response = await fetch(`/api/Professor/${user?.id}/alunos/maior-nivel`);
+
+        if(!response.ok){
+            const error = await response.json();
+            throw new Error("Erro ao buscar quantidade de alunos:" + error.message);
+        }
+
+        const data = await response.json();
+        setMaiorNivelAprendizado(data);
+    }
+
     useEffect(() =>{
-        getAmoutAlunosByProfessor()
+        getAmoutAlunosByProfessor();
+        getMaiorNivelAprendizado();
     },[]);
 
     return (
@@ -70,7 +101,7 @@ export default function Students(){
                             classStyleName="sreachBarStudents" 
                             labelText="Pesquisar aluno por e-mail" 
                             placeholder="exemplo@email.com" 
-                            functionSreach={getStundentByEmail} 
+                            functionSreach={getAlunoByEmail} 
                             functionSetAttribute={setEmailAluno} 
                             textButton="Pesquisar"
                         />
@@ -93,9 +124,9 @@ export default function Students(){
                         <StatCard
                             IconStatReact={FaUserGroup}
                             titleStatCard="Nivel de aprendizado"
-                            amountStatCard={"Intermediário"}
+                            amountStatCard={maiorNivelAprendizado?.nivel ?? "Carregando..."}
                             classNameStatCard="cardOragen"
-                            descriptionStatCard="3 de 6 alunos (50%)"
+                            descriptionStatCard={createStatNivel()}
                         />
                     </div>
                 </div>

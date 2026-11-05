@@ -54,5 +54,19 @@ namespace Ensinly.Server.Controllers {
                 return StatusCode(500, ex.Message);
             }
         }
+
+        [HttpGet("{idUsuario}/alunos/maior-nivel")]
+        public async Task<IActionResult> GetMaiorNivelAprendizadoByProfessor([FromRoute]int idUsuario) {
+            if(idUsuario == 0 || idUsuario == null) {
+                return BadRequest("ID do usuário inválido.");
+            }
+
+            try {
+                var maiorNivel = await _facadeProfessor.SelecionaMaiorNivelAprendizadoPorProfessor(idUsuario);
+                return Ok(maiorNivel);
+            } catch (Exception ex) {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }

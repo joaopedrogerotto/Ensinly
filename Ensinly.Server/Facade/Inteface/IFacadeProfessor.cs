@@ -6,5 +6,6 @@ namespace Ensinly.Server.Facade.Inteface {
         public Task<bool> CadastrarProfessor(ProfessorCreateDTO ProfessorCreateDTO);
         public Task<List<AlunoResponseDTO>> SelecionaAlunosPorProfessor(int idUsuario);
         public Task<int> SelecionaQuantidadeDeAlunosPorProfessor(int idUsuario);
+        public Task<MaiorNivelAprendizadoPorProfessorDTO> SelecionaMaiorNivelAprendizadoPorProfessor(int IdUsuario);
     }
 }

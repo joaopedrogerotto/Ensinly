@@ -65,7 +65,7 @@ namespace Ensinly.Server.DAO {
             }
         }
 
-        public async Task<int> SelectAmoutOfAlunosByProfessor(int idUsuario) {
+        public async Task<int> SelectAmountOfAlunosByProfessor(int idUsuario) {
             int totalAlunos = 0;
 
             using (var conn = await _database.OpenConnection()) {
@@ -77,6 +77,25 @@ namespace Ensinly.Server.DAO {
             }
 
             return totalAlunos;
+        }
+
+        public async Task<MaiorNivelAprendizadoPorProfessorDTO> SelectMaiorNivelAprendizadoPorProfessor(int IdUsuario) {
+            var dto = new MaiorNivelAprendizadoPorProfessorDTO();
+
+            using (var conn = await _database.OpenConnection()) {
+                using (var cmd = new SqlCommand("PR_S_MAIOR_NIVEL_APRENDIZADO_POR_PROF", conn)) {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ID_USU", IdUsuario);
+                    using (var reader = await cmd.ExecuteReaderAsync()) {
+                        if (await reader.ReadAsync()) {
+                            dto.TotalAlunos = reader.GetInt32(reader.GetOrdinal("TOTAL_ALUNOS"));
+                            dto.TotalAlunosNivel = reader.GetInt32(reader.GetOrdinal("TOTAL_ALUNOS_NIVEL"));
+                            dto.Nivel = reader.GetString(reader.GetOrdinal("NIVEL"));
+                        }
+                    }
+                }
+            }
+            return dto;
         }
 
         private DataTable ConvertForDataTable (List<int> IdMaterias) {

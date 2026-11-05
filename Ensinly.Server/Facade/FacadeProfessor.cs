@@ -15,7 +15,9 @@ namespace Ensinly.Server.Facade {
 
         public async Task<List<AlunoResponseDTO>> SelecionaAlunosPorProfessor(int idUsuario) => await _daoProfessor.SelectAlunosByProfessor(idUsuario);
 
-        public Task<int> SelecionaQuantidadeDeAlunosPorProfessor(int idUsuario) => _daoProfessor.SelectAmoutOfAlunosByProfessor(idUsuario);
+        public async Task<int> SelecionaQuantidadeDeAlunosPorProfessor(int idUsuario) => await _daoProfessor.SelectAmountOfAlunosByProfessor(idUsuario);
+
+        public async Task<MaiorNivelAprendizadoPorProfessorDTO> SelecionaMaiorNivelAprendizadoPorProfessor(int IdUsuario) => await _daoProfessor.SelectMaiorNivelAprendizadoPorProfessor(IdUsuario);
     }
 }
  

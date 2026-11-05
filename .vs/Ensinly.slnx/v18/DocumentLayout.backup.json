@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Projetos\\Ensinly\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\facade\\facadeprofessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\facade\\facadeprofessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\controllers\\professorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\controllers\\professorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -82,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "IFacadeProfessor.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Facade\\Inteface\\IFacadeProfessor.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Facade\\Inteface\\IFacadeProfessor.cs",
@@ -95,7 +99,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IDAOProfessor.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\DAO\\Interfaces\\IDAOProfessor.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\DAO\\Interfaces\\IDAOProfessor.cs",
@@ -108,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "DAOProfessor.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\DAO\\DAOProfessor.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\DAO\\DAOProfessor.cs",
@@ -121,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Program.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Program.cs",
@@ -133,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AlunoController.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Controllers\\AlunoController.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Controllers\\AlunoController.cs",
@@ -152,6 +156,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "FacadeProfessor.cs",
+              "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Facade\\FacadeProfessor.cs",
+              "RelativeDocumentMoniker": "Ensinly.Server\\Facade\\FacadeProfessor.cs",
+              "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Facade\\FacadeProfessor.cs",
+              "RelativeToolTip": "Ensinly.Server\\Facade\\FacadeProfessor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAACLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T11:39:55.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ProfessorController.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Controllers\\ProfessorController.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Controllers\\ProfessorController.cs",
@@ -164,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "FacadeAluno.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Facade\\FacadeAluno.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Facade\\FacadeAluno.cs",
@@ -176,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IFacadeAluno.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Facade\\Inteface\\IFacadeAluno.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Facade\\Inteface\\IFacadeAluno.cs",
@@ -188,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "IDAOAluno.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\DAO\\Interfaces\\IDAOAluno.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\DAO\\Interfaces\\IDAOAluno.cs",
@@ -200,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DAOAluno.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\DAO\\DAOAluno.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\DAO\\DAOAluno.cs",
@@ -213,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AlunoResponseDTO.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\DTO\\AlunoResponseDTO.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\DTO\\AlunoResponseDTO.cs",

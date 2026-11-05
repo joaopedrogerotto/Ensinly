@@ -5,6 +5,7 @@ namespace Ensinly.Server.DAO.Interfaces {
     public interface IDAOProfessor {
         public Task<bool> InsertProfessor(ProfessorCreateDTO ProfessorCreateDTO);
         public Task<List<AlunoResponseDTO>> SelectAlunosByProfessor(int idUsuario);
-        public Task<int> SelectAmoutOfAlunosByProfessor(int idUsuario);
+        public Task<int> SelectAmountOfAlunosByProfessor(int idUsuario);
+        public Task<MaiorNivelAprendizadoPorProfessorDTO> SelectMaiorNivelAprendizadoPorProfessor(int IdUsuario);
     }
 }
