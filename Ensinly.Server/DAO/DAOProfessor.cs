@@ -65,6 +65,20 @@ namespace Ensinly.Server.DAO {
             }
         }
 
+        public async Task<int> SelectAmoutOfAlunosByProfessor(int idUsuario) {
+            int totalAlunos = 0;
+
+            using (var conn = await _database.OpenConnection()) {
+                using (var cmd = new SqlCommand("PR_S_QUANTIDADE_ALUNOS_POR_PROF", conn)) {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ID_USU", idUsuario);
+                    totalAlunos = (int)await cmd.ExecuteScalarAsync();
+                }
+            }
+
+            return totalAlunos;
+        }
+
         private DataTable ConvertForDataTable (List<int> IdMaterias) {
             var table = new DataTable();
             table.Columns.Add("ID", typeof(int));

@@ -40,5 +40,19 @@ namespace Ensinly.Server.Controllers {
                 return StatusCode(500, ex.Message);
             }
         }
+
+        [HttpGet("{idUsuario}/alunos/quantidade")]
+        public async Task<IActionResult> GetQuantidadeAlunosByProfessor([FromRoute]int idUsuario) {
+            if(idUsuario == 0 || idUsuario == null) {
+                return BadRequest("ID do usuário inválido.");
+            }
+
+            try {
+                var quantidade = await _facadeProfessor.SelecionaQuantidadeDeAlunosPorProfessor(idUsuario);
+                return Ok(quantidade);
+            } catch (Exception ex) {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }

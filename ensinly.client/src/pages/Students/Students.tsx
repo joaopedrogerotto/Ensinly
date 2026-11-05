@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MyStudents from "../../Components/MyStudents/MyStudents";
 import Navbar from "../../Components/NavBar/Navbar";
 import SreachBar from "../../Components/SreachBar/SreachBar";
@@ -6,7 +6,8 @@ import style from "./Students.module.css";
 import InfoStudent from "../../Components/InfoStudent/InfoStudent";
 import StatCard from "../../Components/StatCard/StatCard";
 import { FaUserGroup } from "react-icons/fa6";
-import { FaClipboard, FaRegObjectGroup } from "react-icons/fa";
+import { FaClipboard } from "react-icons/fa";
+import { useAuth } from "../../Context/AuthContext";
 
 interface AlunoResponse{
     id: number;
@@ -22,6 +23,9 @@ interface AlunoResponse{
 export default function Students(){
     const [emailAluno, setEmailAluno] = useState("");
     const [aluno, setAluno] = useState<AlunoResponse>();
+    const [quantidadeAlunos, setQuantidadeAluno] = useState(0);
+    const {user} = useAuth();
+
 
     async function getStundentByEmail(){
         const response = await fetch(`/api/aluno/${emailAluno}`);
@@ -32,9 +36,25 @@ export default function Students(){
         }
 
         const data = await response.json();
-        console.log(data);
         setAluno(data);
     }
+
+    async function getAmoutAlunosByProfessor() {
+
+        const response = await fetch(`/api/Professor/${user?.id}/alunos/quantidade`);
+
+        if(!response.ok){
+            const error = await response.json();
+            throw new Error("Erro ao buscar quantidade de alunos:" + error.message);
+        }
+
+        const data = await response.json();
+        setQuantidadeAluno(data);
+    }
+
+    useEffect(() =>{
+        getAmoutAlunosByProfessor()
+    },[]);
 
     return (
         <>
@@ -61,7 +81,7 @@ export default function Students(){
                         <StatCard
                             IconStatReact={FaUserGroup}
                             titleStatCard="Total de alunos ativos"
-                            amountStatCard={(6).toString()}
+                            amountStatCard={(quantidadeAlunos).toString()}
                             classNameStatCard="cardGreen"
                         />
                         <StatCard
