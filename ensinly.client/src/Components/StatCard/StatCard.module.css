@@ -1,0 +1,38 @@
+.titleCard{
+    margin: 0;
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+.amoutCard{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.descriptionCard{
+    font-size: .6rem;
+}
+
+.cardGreen{
+    width: 320px;
+    padding: 10px;
+    border-radius: 15px;
+    background: #E5F6EC;
+    box-shadow: 0 2px 10px rgba(30, 58, 138, 0.12);
+}
+
+.cardPurple{
+    width: 320px;
+    padding: 10px;
+    border-radius: 15px;
+    background: #F3E8FF;
+    box-shadow: 0 2px 10px rgba(30, 58, 138, 0.12);
+}
+
+.cardOragen{
+    width: 320px;
+    padding: 10px;
+    border-radius: 15px;
+    background: #FFF3DC;
+    box-shadow: 0 2px 10px rgba(30, 58, 138, 0.12);
+}
