@@ -61,7 +61,7 @@
 <colUsage columnID="7149A80A-B2F2-B97C-92AF-3B62FDAA5D55"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="E2D1E195-0517-6DAD-E914-CDCB7413575E" name="FK_PRF_USU">
+<ind_PK_UK id="E2D1E195-0517-6DAD-E914-CDCB7413575E" name="PROFESSORES_USUARIOS_FK">
 <createdBy>jp120</createdBy>
 <createdTime>2026-09-30 19:40:10 UTC</createdTime>
 <generatorID>D366AAFF-AE94-1BCB-F033-53D040100DFA</generatorID>

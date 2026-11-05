@@ -123,7 +123,7 @@
 <colUsage columnID="EE32796C-00C7-7FCC-BB7F-27D38FE745CC"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="9C409B21-E09E-983B-B782-9AE7CE2C243A" name="FK_ATV_STV">
+<ind_PK_UK id="9C409B21-E09E-983B-B782-9AE7CE2C243A" name="FK_ATV_STA">
 <createdBy>jp120</createdBy>
 <createdTime>2026-09-30 19:40:10 UTC</createdTime>
 <generatorID>2834C4DD-0406-C164-F2B3-4C2986D832C0</generatorID>

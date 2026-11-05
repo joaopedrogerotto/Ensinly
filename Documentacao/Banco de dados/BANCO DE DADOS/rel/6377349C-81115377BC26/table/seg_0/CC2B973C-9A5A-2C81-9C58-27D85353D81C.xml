@@ -59,7 +59,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="8F18CE3F-8C98-0A51-D74D-BA86A97C68BD" name="MATERIAIS_PK">
+<ind_PK_UK id="8F18CE3F-8C98-0A51-D74D-BA86A97C68BD" name="PK_MTR">
 <createdBy>jp120</createdBy>
 <createdTime>2026-09-30 19:40:09 UTC</createdTime>
 <generatorID>E5C9CDE6-EABD-294A-D99C-3CE2A30F004D</generatorID>

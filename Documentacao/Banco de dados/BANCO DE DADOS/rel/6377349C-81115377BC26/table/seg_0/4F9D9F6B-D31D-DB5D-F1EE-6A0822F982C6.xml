@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4F9D9F6B-D31D-DB5D-F1EE-6A0822F982C6" name="CONVITES">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:49:01 UTC</createdTime>
+<generatorID>DFD54C3D-C889-541D-E867-E937F9EFE387</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CVT_ID" id="81AE6D64-9715-EB7D-04F6-ACDC4BD31FB8">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:49:01 UTC</createdTime>
+<generatorID>2B7BBFE7-DEC1-397C-F32D-31899CA77ED0</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CVT_TOKEN_HASH" id="551E7A5B-5EF7-C94D-DC6A-22FAE12FBF32">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:49:01 UTC</createdTime>
+<generatorID>25C87074-5988-1D97-DC3F-F3B805BC95F0</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CVT_DT_CRIACAO" id="9CEF894A-46CE-DD84-BE8D-895BDC37AD93">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:49:01 UTC</createdTime>
+<generatorID>D956FDA5-187A-0BC2-C65B-BF1C94D2CC03</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CVT_DT_EXPIRACAO" id="A19945C9-7A98-6579-08BF-34F94025439E">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:49:01 UTC</createdTime>
+<generatorID>5BE62027-A385-5A3B-1763-065F7CD6EC61</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CVT_DT_ACEITE" id="FAE4E1D0-572F-F6C4-D79F-6391700C11F1">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:49:01 UTC</createdTime>
+<generatorID>3F50D3CE-539E-246D-395B-A8E4FDC2BF94</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CVT_PRF_ID" id="5D9E57A2-78FF-056A-5E5C-4A9E00A86095">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:49:01 UTC</createdTime>
+<generatorID>DDA7B135-3109-734D-F319-4548DA888E03</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="13043BA9-DFB1-651C-F1D7-7B67C8137680" referredColumn="7149A80A-B2F2-B97C-92AF-3B62FDAA5D55"/>
+</associations>
+</Column>
+<Column name="CVT_ALU_ID" id="3DC94C4C-72DC-BECD-A484-99CEB1C82C93">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:49:01 UTC</createdTime>
+<generatorID>49AFE5A9-3820-0CCB-46FC-EBC60E9BCAE2</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="331FED99-6F65-6EAD-B081-5D7FDECBF75E" referredColumn="AD958F61-9CC3-F23C-2DF9-844656D65EF2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="540528C1-E57E-0D4F-33D2-5CBE9821B7EE" name="CVT_PK">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:49:01 UTC</createdTime>
+<generatorID>FABB6A9A-EDE7-6B21-E811-B377946ACBC7</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D9E57A2-78FF-056A-5E5C-4A9E00A86095"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="002C181C-2373-CE6A-FFCE-78F33DA21286" name="FK_CVT_PRF">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:49:01 UTC</createdTime>
+<generatorID>C877D1AE-3887-761E-A88B-9E7E3D09E011</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D9E57A2-78FF-056A-5E5C-4A9E00A86095"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E8F78BDC-872E-75D8-4EF5-5EF68A75C716" name="FK_CVT_ALU">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:49:01 UTC</createdTime>
+<generatorID>B3273949-055A-C811-0E64-3FDF840CC015</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3DC94C4C-72DC-BECD-A484-99CEB1C82C93"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

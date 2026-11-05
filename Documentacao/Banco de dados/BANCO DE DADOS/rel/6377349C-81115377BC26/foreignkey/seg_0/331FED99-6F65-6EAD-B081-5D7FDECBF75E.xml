@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="331FED99-6F65-6EAD-B081-5D7FDECBF75E" containerWithKeyObject="4F9D9F6B-D31D-DB5D-F1EE-6A0822F982C6" localFKIndex="E8F78BDC-872E-75D8-4EF5-5EF68A75C716" name="FK_CVT_ALU">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:49:01 UTC</createdTime>
+<generatorID>B3273949-055A-C811-0E64-3FDF840CC015</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<referredTableLongName>ALUNOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9E076E32-EFF5-F772-B7C0-C6762D6B385F</referredTableID>
+<keyObject>F6A89F71-27BC-E1C9-88F0-3D032E1C0DF2</keyObject>
+<referredKeyID>F6A89F71-27BC-E1C9-88F0-3D032E1C0DF2</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ALU_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

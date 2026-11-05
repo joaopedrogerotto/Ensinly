@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DFD54C3D-C889-541D-E867-E937F9EFE387" name="CONVITES">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:15:00 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CVT_ID" id="2B7BBFE7-DEC1-397C-F32D-31899CA77ED0">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:16:13 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CVT_TOKEN_HASH" id="25C87074-5988-1D97-DC3F-F3B805BC95F0">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:16:19 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2000</dataTypeSize>
+<ownDataTypeParameters>2000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CVT_DT_CRIACAO" id="D956FDA5-187A-0BC2-C65B-BF1C94D2CC03">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:16:31 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CVT_DT_EXPIRACAO" id="5BE62027-A385-5A3B-1763-065F7CD6EC61">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:16:43 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CVT_DT_ACEITE" id="3F50D3CE-539E-246D-395B-A8E4FDC2BF94">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:16:53 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>91229484-D19C-D458-8647-333C7FFE7B60</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CVT_PRF_ID" id="DDA7B135-3109-734D-F319-4548DA888E03">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:43:10 UTC</createdTime>
+<generatorID>C877D1AE-3887-761E-A88B-9E7E3D09E011</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<referedAttribute>BDB176DB-47D9-7409-E7A9-76FC25F421FD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CVT_ALU_ID" id="49AFE5A9-3820-0CCB-46FC-EBC60E9BCAE2">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:46:26 UTC</createdTime>
+<generatorID>B3273949-055A-C811-0E64-3FDF840CC015</generatorID>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<referedAttribute>D50D2BA0-A722-39C7-2E99-0BC39471D41C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FABB6A9A-EDE7-6B21-E811-B377946ACBC7" name="PK_CVT">
+<createdBy>jp120</createdBy>
+<createdTime>2026-11-05 14:42:18 UTC</createdTime>
+<ownerDesignName>BANCO DE DADOS</ownerDesignName>
+<engineerTo>
+<item key="6377349C-1D70-FA8F-A5CA-81115377BC26" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<newElementsIDs>2B7BBFE7-DEC1-397C-F32D-31899CA77ED0,C877D1AE-3887-761E-A88B-9E7E3D09E011</newElementsIDs>
+<usedAttributes>
+<attributeRef>2B7BBFE7-DEC1-397C-F32D-31899CA77ED0</attributeRef>
+<attributeRef>DDA7B135-3109-734D-F319-4548DA888E03</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

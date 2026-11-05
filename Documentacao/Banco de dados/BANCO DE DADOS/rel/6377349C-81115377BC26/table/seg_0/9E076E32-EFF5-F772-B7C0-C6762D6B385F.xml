@@ -56,7 +56,7 @@
 <ownDataTypeParameters>1000,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="ALU_USU_ID" id="60C0AB73-3EDB-766F-5370-0CA79B433BCC">
+<Column name="USUARIOS_USU_ID" id="60C0AB73-3EDB-766F-5370-0CA79B433BCC">
 <createdBy>jp120</createdBy>
 <createdTime>2026-09-30 19:40:09 UTC</createdTime>
 <generatorID>99989DD4-3C2E-087C-A423-10AA3B2F7FA0</generatorID>

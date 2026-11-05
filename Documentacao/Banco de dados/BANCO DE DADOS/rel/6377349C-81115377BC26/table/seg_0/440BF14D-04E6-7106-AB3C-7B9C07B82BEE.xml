@@ -72,7 +72,7 @@
 <colUsage columnID="B9C25F36-5C89-2FC9-B410-680D65F6F5BF"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="A292B2DB-A619-75BC-BF64-82D0A5187DA5" name="PK_HCA_AUL">
+<ind_PK_UK id="A292B2DB-A619-75BC-BF64-82D0A5187DA5" name="FK_HCA_AUL">
 <createdBy>jp120</createdBy>
 <createdTime>2026-09-30 19:40:10 UTC</createdTime>
 <generatorID>537C6ACC-17C0-D9E5-9396-C13E45FACEA0</generatorID>
