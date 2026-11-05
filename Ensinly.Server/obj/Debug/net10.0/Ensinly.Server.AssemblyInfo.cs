@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ensinly.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+810688534449d3f0666490797c42f5d4adace1ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c18204ea03d0a7e602eddd884cee3e66a0a14bcf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ensinly.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ensinly.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

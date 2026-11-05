@@ -2,6 +2,8 @@ using Ensinly.Server.DAO;
 using Ensinly.Server.DAO.Interfaces;
 using Ensinly.Server.Facade;
 using Ensinly.Server.Facade.Inteface;
+using Ensinly.Server.Service;
+using Ensinly.Server.Settings;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,11 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+
+builder.Services.AddTransient<EmailService>();
+builder.Services.AddScoped<ConviteService>();
+
 builder.Services.AddSingleton<IDAODatabase, DAOSQLServer>();
 builder.Services.AddSingleton<IDAOUsuario, DAOUsuario>();
 builder.Services.AddSingleton<IDAOAluno, DAOAluno>();
@@ -19,6 +26,7 @@ builder.Services.AddSingleton<IDAOLogin, DAOLogin>();
 builder.Services.AddSingleton<IDAOProfessor, DAOProfessor>();
 builder.Services.AddSingleton<IDAONivelAprendizado, DAONivelAprendizado>();
 builder.Services.AddSingleton<IDAOMateria, DAOMateria>();
+builder.Services.AddSingleton<IDAOConvite, DAOConvite>();
 
 builder.Services.AddSingleton<IFacadeUsuario, FacadeUsuario>();
 builder.Services.AddSingleton<IFacadeAluno, FacadeAluno>();
@@ -26,6 +34,7 @@ builder.Services.AddSingleton<IFacadeLogin, FacadeLogin>();
 builder.Services.AddSingleton<IFacadeProfessor, FacadeProfessor>();
 builder.Services.AddSingleton<IFacadeNivelAprendizado, FacadeNivelAprendizado>();
 builder.Services.AddSingleton<IFacadeMateria, FacadeMateria>();
+builder.Services.AddScoped<IFacadeConvite, FacadeConvite>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(op => {
     op.Cookie.Name = "session";

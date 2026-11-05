@@ -7,5 +7,6 @@ namespace Ensinly.Server.DAO.Interfaces {
         public Task<List<AlunoResponseDTO>> SelectAlunosByProfessor(int idUsuario);
         public Task<int> SelectAmountOfAlunosByProfessor(int idUsuario);
         public Task<MaiorNivelAprendizadoPorProfessorDTO> SelectMaiorNivelAprendizadoPorProfessor(int IdUsuario);
+        public Task<Professor> SelectProfessorByIdUsuario (int idUsuario);
     }
 }

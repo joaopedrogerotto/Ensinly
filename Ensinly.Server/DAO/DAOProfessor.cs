@@ -1,6 +1,7 @@
 ﻿using Ensinly.Server.DAO.Interfaces;
 using Ensinly.Server.DTO;
 using Ensinly.Server.Enums;
+using Ensinly.Server.Exceptions;
 using Ensinly.Server.Models;
 using Microsoft.Data.SqlClient;
 using System.Data;
@@ -96,6 +97,33 @@ namespace Ensinly.Server.DAO {
                 }
             }
             return dto;
+        }
+
+        public async Task<Professor> SelectProfessorByIdUsuario(int idUsuario) {
+            var professor = new Professor();
+
+            try {
+                using (var conn = await _database.OpenConnection()) {
+                    using (var cmd = new SqlCommand("PR_S_PROFESSOR_POR_ID_USUARIO", conn)) {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@ID_USU", idUsuario);
+                        using (var reader = await cmd.ExecuteReaderAsync()) {
+                            if (await reader.ReadAsync()) {
+                                professor.Id = reader.GetInt32(reader.GetOrdinal("PRF_ID"));
+                                professor.Nome = reader.GetString(reader.GetOrdinal("USU_NOME"));
+                                professor.Email = reader.GetString(reader.GetOrdinal("USU_EMAIL"));
+                                professor.Descricao = reader.GetString(reader.GetOrdinal("PRF_DESCRICAO"));
+                                professor.Status = reader.GetBoolean(reader.GetOrdinal("USU_STATUS"));
+                            } else {
+                                throw new EntityNotFoundException($"Professor com ID de usuário '{idUsuario}' não encontrado.");
+                            }
+                        }
+                    }
+                }
+                return professor;
+            }catch (Exception ex) {
+                throw new Exception($"Erro ao selecionar professor por ID de usuário: {ex.Message}");
+            }
         }
 
         private DataTable ConvertForDataTable (List<int> IdMaterias) {

@@ -40,6 +40,32 @@ namespace Ensinly.Server.DAO {
             }
         }
 
+        public async Task<Aluno> SelectAlunoByIdUsuario(int idUsuario) {
+            var aluno = new Aluno();
+
+            try {
+                using (var conn = await _database.OpenConnection()) {
+                    using (var cmd = new SqlCommand("PR_S_ALUNO_POR_ID_USUARIO", conn)) {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@ID_USU", idUsuario);
+                        using (var reader = cmd.ExecuteReader()) {
+                            if (reader.Read()) {
+                                aluno.Id = reader.GetInt32(reader.GetOrdinal("ALU_ID"));
+                                aluno.Nome = reader.GetString(reader.GetOrdinal("USU_NOME"));
+                                aluno.Email = reader.GetString(reader.GetOrdinal("USU_EMAIL"));
+                                aluno.Status = reader.GetBoolean(reader.GetOrdinal("USU_STATUS"));
+                            } else {
+                                throw new EntityNotFoundException($"Aluno com ID de usuário '{idUsuario}' não encontrado.");
+                            }
+                        }
+                    }
+                }
+                return aluno;
+            } catch (Exception ex) {
+                throw new Exception($"Erro ao selecionar aluno por ID de usuário: {ex.Message}", ex);
+            }
+        }
+
         public async Task<AlunoResponseDTO> SelectByEmail(string email) {
             try {
                 var alunoResponse = new AlunoResponseDTO();
