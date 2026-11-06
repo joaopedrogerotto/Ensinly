@@ -15,5 +15,19 @@ namespace Ensinly.Server.Mapper {
                 NivelAprendizado = (NivelAprendizadoEnum)dto.IdNivelAprendizado
             };
         }
+
+        public static AlunoVinculoResponseDTO ToVinculoDTO(AlunoResponseDTO aluno, string vinculoStatus) {
+            return new AlunoVinculoResponseDTO {
+                Id = aluno.Id,
+                Nome = aluno.Nome,
+                Email = aluno.Email,
+                Observacao = aluno.Observacao,
+                Telefone = aluno.Telefone,
+                DataNascimento = aluno.DataNascimento,
+                NivelAprendizado = aluno.NivelAprendizado.ToString(),
+                Status = aluno.Status, 
+                VinculoStatus = vinculoStatus
+            };
+        }
     }
 }

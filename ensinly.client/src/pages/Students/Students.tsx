@@ -18,6 +18,7 @@ interface AlunoResponse{
     dataNascimento: string;
     nivelAprendizado: string;
     status: boolean;
+    vinculoStatus: string;
 };
 
 interface MaiorNivelAprendizadoResponse{
@@ -40,13 +41,13 @@ export default function Students(){
 
         const {totalAlunos, totalAlunosNivel} = maiorNivelAprendizado;
         
-        const percentage = totalAlunos > 0 ? (totalAlunosNivel * 100) / totalAlunosNivel : 0;
+        const percentage = totalAlunos > 0 ? (totalAlunosNivel * 100) / totalAlunos : 0;
 
         return `${maiorNivelAprendizado.totalAlunosNivel} de ${maiorNivelAprendizado.totalAlunos} alunos (${percentage}%)`
     }
 
-    async function getAlunoByEmail(){
-        const response = await fetch(`/api/aluno/${emailAluno}`);
+    async function getAlunoParaVinculo(){
+        const response = await fetch(`/api/aluno/${emailAluno}/vinculo`);
 
         if(!response.ok){
             const error = await response.json();
@@ -101,7 +102,7 @@ export default function Students(){
                             classStyleName="sreachBarStudents" 
                             labelText="Pesquisar aluno por e-mail" 
                             placeholder="exemplo@email.com" 
-                            functionSreach={getAlunoByEmail} 
+                            functionSreach={getAlunoParaVinculo} 
                             functionSetAttribute={setEmailAluno} 
                             textButton="Pesquisar"
                         />

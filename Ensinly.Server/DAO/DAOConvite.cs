@@ -29,5 +29,20 @@ namespace Ensinly.Server.DAO {
                 throw new Exception($"Erro ao inserir convite: {ex.Message}", ex);
             }           
         }
+
+        public async Task<string> SelectVinculoAlunoProfessor(int idAluno, int idProfessor) {
+            string vinculo = "";
+
+            using (var conn = await _database.OpenConnection()) {
+                using (var cmd = new SqlCommand("PR_S_VERIFICA_VINCULO", conn)) {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ID_ALUNO", idAluno);
+                    cmd.Parameters.AddWithValue("@ID_PROFESSOR", idProfessor);
+                    vinculo = await cmd.ExecuteScalarAsync() as string;
+                }
+            }
+
+            return vinculo;
+        }
     }
 }

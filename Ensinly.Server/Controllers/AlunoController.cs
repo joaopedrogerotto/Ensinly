@@ -3,6 +3,7 @@ using Ensinly.Server.Exceptions;
 using Ensinly.Server.Facade.Inteface;
 using Ensinly.Server.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Ensinly.Server.Controllers {
     [ApiController]
@@ -38,6 +39,27 @@ namespace Ensinly.Server.Controllers {
 
             try {
                 var aluno = await _facadeAluno.SelecionarPorEmail(emailAluno);
+                return Ok(aluno);
+            } catch (EntityNotFoundException ex) {
+                return NotFound(new { message = ex.Message });
+            } catch (Exception ex) {
+                return StatusCode(500, $"Erro ao selecionar aluno por email: {ex.Message}");
+            }
+        }
+
+        [HttpGet("{emailAluno}/vinculo")]
+        public async Task<IActionResult> GetAlunoParaVinculo(string emailAluno) {
+            if (String.IsNullOrEmpty(emailAluno)) {
+                return BadRequest("Email do aluno é obrigatório.");
+            }
+
+            var idProfessorUsuarioString = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(idProfessorUsuarioString) || !int.TryParse(idProfessorUsuarioString, out int idProfessorUsuario)) {
+                return BadRequest("ID do professor é inválido.");
+            }
+
+            try {
+                var aluno = await _facadeAluno.SelecionarAlunoParaVinculo(new AlunoEmailRequestDTO { email = emailAluno, idProfessorUsuario = idProfessorUsuario });
                 return Ok(aluno);
             } catch (EntityNotFoundException ex) {
                 return NotFound(new { message = ex.Message });

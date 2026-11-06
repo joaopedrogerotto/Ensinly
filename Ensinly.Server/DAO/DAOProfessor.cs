@@ -46,7 +46,7 @@ namespace Ensinly.Server.DAO {
                         using (var reader = await cmd.ExecuteReaderAsync()) {
                             while (await reader.ReadAsync()) {
                                 var aluno = new AlunoResponseDTO {
-                                    IdUsuario = reader.GetInt32(reader.GetOrdinal("ALU_ID")),
+                                    Id = reader.GetInt32(reader.GetOrdinal("ALU_ID")),
                                     Nome = reader.GetString(reader.GetOrdinal("USU_NOME")),
                                     Email = reader.GetString(reader.GetOrdinal("USU_EMAIL")),
                                     DataNascimento = reader.GetDateTime(reader.GetOrdinal("ALU_DT_NASCIMENTO")),

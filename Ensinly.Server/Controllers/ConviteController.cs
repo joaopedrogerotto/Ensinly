@@ -19,6 +19,10 @@ namespace Ensinly.Server.Controllers {
         [HttpPost("aluno-professor-vinculo")]
         public async Task<IActionResult> PostEmailConvite([FromBody] ConviteRequestDTO conviteRequestDto) {
             try {
+                if(await _facadeConvite.VerificaVinculo(conviteRequestDto)) {
+                    return BadRequest(new { message = "O aluno já está vinculado a este professor." });
+                }
+
                 var convite = await _facadeConvite.CriarConvite(conviteRequestDto);
                 return Ok();
             }catch(Exception ex) {

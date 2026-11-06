@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuth } from "../../Context/AuthContext";
 import Button from "../Button/Button";
 import style from "./InfoStudent.module.css";
 import InformationalModal from "../InformationalModal/InformationalModal";
 
 interface AlunoResponse{
-    idUsuario: number;
+    id: number;
     nome: string;
     email: string;
     observacao: string;
@@ -13,6 +13,7 @@ interface AlunoResponse{
     dataNascimento: string;
     nivelAprendizado: string;
     status: boolean;
+    vinculoStatus: string;
 };
 
 interface InfoStudentProps{
@@ -21,7 +22,7 @@ interface InfoStudentProps{
 
 interface ConviteRequest{
     IdProfessorUsuario: number;
-    IdAlunoUsuario: number;
+    IdAluno: number;
     EmailDestinatario: string;
 }
 
@@ -29,10 +30,11 @@ export default function InfoStudent({alunoResponse}:InfoStudentProps){
     const {user} = useAuth();
 
     const [isLoading, setIsLoading] = useState(false);
+    const [vinculo, setVinculo] = useState("");
 
     const conviteRequest: ConviteRequest = {
         IdProfessorUsuario: Number(user?.id),
-        IdAlunoUsuario: Number(alunoResponse?.idUsuario), 
+        IdAluno: Number(alunoResponse?.id), 
         EmailDestinatario: alunoResponse?.email ?? ""
     };
 
@@ -66,10 +68,12 @@ export default function InfoStudent({alunoResponse}:InfoStudentProps){
                 setTitleModal("Convite enviado!");
                 setTextModal("O convite foi enviado com sucesso para o email do aluno.");
                 setShowModal(true);
+                setVinculo("PENDENTE");
             } else {
+                const data = await response.json();
                 setTypeModal("error");
                 setTitleModal("Erro ao enviar convite");
-                setTextModal("Não foi possível enviar o convite. Tente novamente.");
+                setTextModal(data.message);
                 setShowModal(true);
             }
 
@@ -113,13 +117,19 @@ export default function InfoStudent({alunoResponse}:InfoStudentProps){
                     <label>Observação Aluno:</label>
                     <input type="text" name="obsAluno" id="obsAluno" value={alunoResponse?.observacao} readOnly/>
                 </div>
-                <Button 
-                    functionButton={generateInvite}
-                    textButton="Convidar"
-                    styleButton="buttonBlueForm"
-                    isLoading={isLoading}
-                    loadingText="Enviando..."    
-                />
+                {
+                   (vinculo !== "SEM VINCULO" || alunoResponse?.vinculoStatus !== "SEM VINCULO") &&
+                    (
+                        <Button 
+                            functionButton={generateInvite}
+                            textButton={(vinculo === "PENDENTE" || alunoResponse?.vinculoStatus === "PENDENTE") ? "Convite Pendente":"Convidar"}
+                            styleButton="buttonBlueForm"
+                            isLoading={isLoading}
+                            loadingText="Enviando..."
+                            disabled={(vinculo  === "PENDENTE" || alunoResponse?.vinculoStatus === "PENDENTE")}
+                        />
+                    )
+                }
             </div>
              {showModal && (
                 <InformationalModal

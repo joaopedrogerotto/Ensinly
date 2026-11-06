@@ -24,7 +24,7 @@ namespace Ensinly.Server.Facade {
         public async Task<Convite> CriarConvite(ConviteRequestDTO conviteDto) {
             var Convite = new Convite {
                 Professor = await _daoProfessor.SelectProfessorByIdUsuario(conviteDto.IdProfessorUsuario),
-                Aluno = await _daoAluno.SelectAlunoByIdUsuario(conviteDto.IdAlunoUsuario),
+                Aluno = await _daoAluno.SelectByIdAluno(conviteDto.IdAluno),
                 DataCriacao = DateTime.Now,
                 DataExpiracao = DateTime.Now.AddDays(1),
                 TokenHash = _conviteService.GenerateToken()
@@ -110,6 +110,12 @@ namespace Ensinly.Server.Facade {
                 </html>";
 
             await _emailService.SendEmail(convite.Aluno.Email, assunto, mensagem);
+        }
+
+        public async Task<bool> VerificaVinculo(ConviteRequestDTO conviteDto) {
+            var professor = await _daoProfessor.SelectProfessorByIdUsuario(conviteDto.IdProfessorUsuario);
+            var vinculoExiste = await _daoConvite.SelectVinculoAlunoProfessor(conviteDto.IdAluno, professor.Id);
+            return vinculoExiste != "VINCULADO" ? false : true;
         }
 
         private bool verificarEmailAluno(Aluno aluno, string emailDestinatario) {

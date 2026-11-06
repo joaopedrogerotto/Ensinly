@@ -30,3 +30,7 @@
     margin-bottom: 20px;
 }
 
+.buttonBlueForm:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

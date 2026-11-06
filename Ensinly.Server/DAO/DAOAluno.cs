@@ -75,7 +75,7 @@ namespace Ensinly.Server.DAO {
                         cmd.Parameters.AddWithValue("@EMAIL", email);
                         using (SqlDataReader reader = await cmd.ExecuteReaderAsync()) {
                             if (await reader.ReadAsync()) {
-                                alunoResponse.IdUsuario = reader.GetInt32(reader.GetOrdinal("USU_ID"));
+                                alunoResponse.Id = reader.GetInt32(reader.GetOrdinal("ALU_ID"));
                                 alunoResponse.Nome = reader.GetString(reader.GetOrdinal("USU_NOME"));
                                 alunoResponse.Email = reader.GetString(reader.GetOrdinal("USU_EMAIL"));
                                 alunoResponse.Observacao = reader.IsDBNull(reader.GetOrdinal("ALU_OBSERVACAO")) ? null : reader.GetString(reader.GetOrdinal("ALU_OBSERVACAO"));
@@ -92,6 +92,36 @@ namespace Ensinly.Server.DAO {
                 return alunoResponse;
             } catch (Exception ex){
                 throw new Exception($"Erro ao selecionar aluno por email: {ex.Message}", ex);
+            }
+        }
+
+        public async Task<Aluno> SelectByIdAluno(int idAluno) {
+            var aluno = new Aluno();
+
+            try {
+                using (var conn = await _database.OpenConnection()) {
+                    using (var cmd = new SqlCommand("PR_S_ALUNO_POR_ID_ALUNO", conn)) {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@ID_ALUNO", idAluno);
+                        using (var reader = await cmd.ExecuteReaderAsync()) {
+                            if (await reader.ReadAsync()) {
+                                aluno.Id = reader.GetInt32(reader.GetOrdinal("ALU_ID"));
+                                aluno.Nome = reader.GetString(reader.GetOrdinal("USU_NOME"));
+                                aluno.Email = reader.GetString(reader.GetOrdinal("USU_EMAIL"));
+                                aluno.Observacao = reader.IsDBNull(reader.GetOrdinal("ALU_OBSERVACAO")) ? null : reader.GetString(reader.GetOrdinal("ALU_OBSERVACAO"));
+                                aluno.Telefone = reader.IsDBNull(reader.GetOrdinal("ALU_TELEFONE")) ? null : reader.GetString(reader.GetOrdinal("ALU_TELEFONE"));
+                                aluno.DataNascimento = reader.GetDateTime(reader.GetOrdinal("ALU_DT_NASCIMENTO"));
+                                aluno.NivelAprendizado = ((NivelAprendizadoEnum)reader.GetInt32(reader.GetOrdinal("NVA_ID")));
+                                aluno.Status = reader.GetBoolean(reader.GetOrdinal("USU_STATUS"));
+                            } else {
+                                throw new EntityNotFoundException($"Aluno com id  '{idAluno}' não encontrado.");
+                            }
+                        }
+                    }
+                }
+                return aluno;
+            } catch (Exception ex) {
+                throw new Exception($"Erro ao selecionar aluno por ID de usuário: {ex.Message}", ex);
             }
         }
     }
