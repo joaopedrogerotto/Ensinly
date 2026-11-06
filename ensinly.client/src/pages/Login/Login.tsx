@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import style from "./Login.module.css"
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
+import Spinner from "../../Components/Spinner/Spinner";
 
 interface LoginRequest{
   Email: string,
@@ -17,8 +18,16 @@ export default function Login() {
   const navigate = useNavigate();
   const {setUser} = useAuth();
 
+  const [isLoading, setIsLoading] = useState(false);
+
   async function handleLogin(event: React.SubmitEvent) {
     event.preventDefault();
+
+    if(isLoading){
+      return;
+    }
+
+    setIsLoading(true);
 
     const login: LoginRequest = {Email: email, Senha: password}
 
@@ -32,9 +41,10 @@ export default function Login() {
         login
       )
     });
-    
+    setIsLoading(false);
+
     if(response.ok){
-        const usuario = await response.json();
+        const usuario = await response.json();    
         setUser(usuario);
         navigate("/home", {replace: true});
     }else{
@@ -72,7 +82,18 @@ export default function Login() {
           <div className={style.groupBtnLogin}>
             <p>Não possui Login? <a href={style.linkRegister} onClick={() => navigate("/Registration/Registration")}>Cadastrar-se</a></p>
             
-            <button type="submit">Entrar</button>
+            {isLoading ?
+              (
+                
+                <button type="submit">
+                  <Spinner
+                    loadingText="Entrando..."
+                  />
+                </button>
+              ) : (
+                <button type="submit">Entrar</button>
+              )
+            }
           </div>
         </form>
       </main> 

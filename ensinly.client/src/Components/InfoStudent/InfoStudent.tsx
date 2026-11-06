@@ -28,6 +28,8 @@ interface ConviteRequest{
 export default function InfoStudent({alunoResponse}:InfoStudentProps){
     const {user} = useAuth();
 
+    const [isLoading, setIsLoading] = useState(false);
+
     const conviteRequest: ConviteRequest = {
         IdProfessorUsuario: Number(user?.id),
         IdAlunoUsuario: Number(alunoResponse?.idUsuario), 
@@ -41,27 +43,44 @@ export default function InfoStudent({alunoResponse}:InfoStudentProps){
     const [textModal, setTextModal] = useState("");
 
     async function generateInvite(){
-        const response = await fetch("/api/convite/aluno-professor-vinculo",{
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            credentials: "include",
-            body: JSON.stringify(
-                conviteRequest
-            )
-        });
+        if(isLoading){
+            return;
+        }
 
-         if (response.ok) {
-            setTypeModal("success");
-            setTitleModal("Convite enviado!");
-            setTextModal("O convite foi enviado com sucesso para o email do aluno.");
-            setShowModal(true);
-        } else {
+        setIsLoading(true);
+        
+        try{
+            const response = await fetch("/api/convite/aluno-professor-vinculo",{
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                credentials: "include",
+                body: JSON.stringify(
+                    conviteRequest
+                )
+            });
+
+            if (response.ok) {
+                setTypeModal("success");
+                setTitleModal("Convite enviado!");
+                setTextModal("O convite foi enviado com sucesso para o email do aluno.");
+                setShowModal(true);
+            } else {
+                setTypeModal("error");
+                setTitleModal("Erro ao enviar convite");
+                setTextModal("Não foi possível enviar o convite. Tente novamente.");
+                setShowModal(true);
+            }
+
+            } catch (error) {
             setTypeModal("error");
-            setTitleModal("Erro ao enviar convite");
-            setTextModal("Não foi possível enviar o convite. Tente novamente.");
+            setTitleModal("Erro de conexão");
+            setTextModal("Não foi possível conectar ao servidor.");
             setShowModal(true);
+
+        } finally {
+            setIsLoading(false);
         }
     }
 
@@ -97,7 +116,9 @@ export default function InfoStudent({alunoResponse}:InfoStudentProps){
                 <Button 
                     functionButton={generateInvite}
                     textButton="Convidar"
-                    styleButton="buttonBlueForm"    
+                    styleButton="buttonBlueForm"
+                    isLoading={isLoading}
+                    loadingText="Enviando..."    
                 />
             </div>
              {showModal && (
