@@ -3,8 +3,6 @@ using Ensinly.Server.DTO;
 using Ensinly.Server.Facade.Inteface;
 using Ensinly.Server.Models;
 using Ensinly.Server.Service;
-using Ensinly.Server.Settings;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Ensinly.Server.Facade {
     public class FacadeConvite : IFacadeConvite {
