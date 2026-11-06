@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import style from "./SreachBar.module.css"
 
 interface SreachBarProps{
@@ -14,7 +15,7 @@ export default function SreachBar({labelText, placeholder, classStyleName, textB
         <div className={`${style.sreachBar} ${style[classStyleName]}`}> 
             <label htmlFor={classStyleName}>{labelText}</label>
             <input type="text" id={classStyleName} placeholder={placeholder} className={style.input} onChange={(e) => functionSetAttribute(e.target.value)}/>
-            <button onClick={() => functionSreach()}>{textButton}</button>
+            <Button functionButton={functionSreach} textButton={textButton} styleButton="buttonBlue"/>
         </div>
     );
 }

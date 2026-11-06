@@ -1,7 +1,11 @@
+import { useEffect, useState } from "react";
+import { useAuth } from "../../Context/AuthContext";
+import Button from "../Button/Button";
 import style from "./InfoStudent.module.css";
+import InformationalModal from "../InformationalModal/InformationalModal";
 
 interface AlunoResponse{
-    id: number;
+    idUsuario: number;
     nome: string;
     email: string;
     observacao: string;
@@ -15,8 +19,57 @@ interface InfoStudentProps{
     alunoResponse?: AlunoResponse
 }
 
+interface ConviteRequest{
+    IdProfessorUsuario: number;
+    IdAlunoUsuario: number;
+    EmailDestinatario: string;
+}
 
 export default function InfoStudent({alunoResponse}:InfoStudentProps){
+    const {user} = useAuth();
+
+    const conviteRequest: ConviteRequest = {
+        IdProfessorUsuario: Number(user?.id),
+        IdAlunoUsuario: Number(alunoResponse?.idUsuario), 
+        EmailDestinatario: alunoResponse?.email ?? ""
+    };
+
+    //Modal
+    const [showModal, setShowModal] = useState(false);
+    const [typeModal, setTypeModal] = useState("");
+    const [titleModal, setTitleModal] = useState("");
+    const [textModal, setTextModal] = useState("");
+
+    async function generateInvite(){
+        const response = await fetch("/api/convite/aluno-professor-vinculo",{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            credentials: "include",
+            body: JSON.stringify(
+                conviteRequest
+            )
+        });
+
+         if (response.ok) {
+            setTypeModal("success");
+            setTitleModal("Convite enviado!");
+            setTextModal("O convite foi enviado com sucesso para o email do aluno.");
+            setShowModal(true);
+        } else {
+            setTypeModal("error");
+            setTitleModal("Erro ao enviar convite");
+            setTextModal("Não foi possível enviar o convite. Tente novamente.");
+            setShowModal(true);
+        }
+    }
+
+    function handleCloseModal() {
+        setShowModal(false);
+    }
+
+
     return(
         <>
             <div className={style.formGroup}>
@@ -41,7 +94,20 @@ export default function InfoStudent({alunoResponse}:InfoStudentProps){
                     <label>Observação Aluno:</label>
                     <input type="text" name="obsAluno" id="obsAluno" value={alunoResponse?.observacao} readOnly/>
                 </div>
+                <Button 
+                    functionButton={generateInvite}
+                    textButton="Convidar"
+                    styleButton="buttonBlueForm"    
+                />
             </div>
+             {showModal && (
+                <InformationalModal
+                    typeModal={typeModal}
+                    titleModal={titleModal}
+                    textModal={textModal}
+                    onClose={handleCloseModal}
+                />
+            )}
         </>
     );
 }

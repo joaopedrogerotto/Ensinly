@@ -13,6 +13,7 @@ interface AlunoResponse{
     status: boolean;
 };
 
+
 export default function MyStudents(){
     const {user} = useAuth();
 

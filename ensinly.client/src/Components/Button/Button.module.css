@@ -1,0 +1,27 @@
+.buttonBlue{
+    width: 25%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    background: #1e3a8a;
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s, transform 0.1s;
+    margin-bottom: 20px;
+}
+
+.buttonBlueForm{
+    width: 300px;
+    padding: 0.7rem 0.9rem;
+    border: none;
+    border-radius: 10px;
+    background: #1e3a8a;
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s, transform 0.1s;
+    margin-bottom: 20px;
+}
