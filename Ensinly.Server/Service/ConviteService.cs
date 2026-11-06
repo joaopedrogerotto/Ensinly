@@ -1,6 +1,6 @@
 ﻿using System.Security.Cryptography;
 
-namespace Ensinly.Server.Settings {
+namespace Ensinly.Server.Service {
     public class ConviteService {
         private readonly IConfiguration _configuration;
 
