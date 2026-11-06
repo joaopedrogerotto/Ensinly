@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useAuth } from "../../Context/AuthContext";
 import Button from "../Button/Button";
 import style from "./InfoStudent.module.css";
