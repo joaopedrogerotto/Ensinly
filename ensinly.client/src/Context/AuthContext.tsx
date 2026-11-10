@@ -25,7 +25,7 @@ export function AuthProvider({children}: AuthProvidadesProps){
 
 
     useEffect(() =>{
-        fetch("api/me",{credentials: "include"})
+        fetch("/api/me",{credentials: "include"})
             .then((r) => (r.ok ? r.json() : null))
             .then(setUser)
             .catch(() => setUser(null))
@@ -34,7 +34,7 @@ export function AuthProvider({children}: AuthProvidadesProps){
 
     return (
         <AuthContext.Provider value={{user,loading,setUser}}>
-            {children}
+            {loading ? <div>Carregando...</div> : children}
         </AuthContext.Provider>
     )
 }

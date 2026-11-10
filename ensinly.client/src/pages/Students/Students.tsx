@@ -32,7 +32,7 @@ export default function Students(){
     const [aluno, setAluno] = useState<AlunoResponse>();
     const [quantidadeAlunos, setQuantidadeAluno] = useState(0);
     const [maiorNivelAprendizado, setMaiorNivelAprendizado] = useState<MaiorNivelAprendizadoResponse>();
-    const {user} = useAuth();
+    const {user, loading} = useAuth();
 
     function createStatNivel(){
         if (!maiorNivelAprendizado) {
@@ -84,9 +84,11 @@ export default function Students(){
     }
 
     useEffect(() =>{
+        if(loading || !user?.id) return;
+
         getAmoutAlunosByProfessor();
         getMaiorNivelAprendizado();
-    },[]);
+    },[loading, user?.id]);
 
     return (
         <>

@@ -4,12 +4,11 @@ import { useAuth } from "../../Context/AuthContext";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar(){
-    const {user} = useAuth();
+    const {user, loading} = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
     
     let menu;
-
     if(user?.tipoUsuario === "ALUNO"){
         menu = (
             <>

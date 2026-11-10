@@ -15,12 +15,12 @@ interface AlunoResponse{
 
 
 export default function MyStudents(){
-    const {user} = useAuth();
+    const {user, loading} = useAuth();
 
     const [alunos, setAlunos] = useState<AlunoResponse[]>([]);
 
     async function getStudents() {
-        const response = await fetch(`/api/Professor/${user?.id}/alunos`);
+        const response = await fetch(`/api/Professor/${user!.id}/alunos`);
 
         if(!response.ok){
             const error = await response.json();
@@ -32,9 +32,11 @@ export default function MyStudents(){
     }
 
     useEffect(() => {
-        getStudents()
-    },[])
+        if(loading || !user?.id) return;
 
+        getStudents();
+    },[loading, user?.id]);
+    
     return(
         <>   
             <div className={style.page}>
