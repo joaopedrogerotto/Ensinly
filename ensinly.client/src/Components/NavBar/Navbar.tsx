@@ -4,7 +4,7 @@ import { useAuth } from "../../Context/AuthContext";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Navbar(){
-    const {user, loading} = useAuth();
+    const {user} = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
     
