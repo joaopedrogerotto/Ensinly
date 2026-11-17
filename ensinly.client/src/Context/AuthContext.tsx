@@ -34,7 +34,7 @@ export function AuthProvider({children}: AuthProvidadesProps){
 
     return (
         <AuthContext.Provider value={{user,loading,setUser}}>
-            {loading ? <div>Carregando...</div> : children}
+            {children}
         </AuthContext.Provider>
     )
 }

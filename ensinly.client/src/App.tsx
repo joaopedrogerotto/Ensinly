@@ -5,6 +5,8 @@ import { AuthProvider } from "./Context/AuthContext";
 import CadastroAluno from "./pages/Registration/StudentRegistration/StudentRegistration";
 import Registration from "./pages/Registration/Registration";
 import Students from "./pages/Students/Students";
+import Accept from "./pages/Invite/Accept/Accept";
+import ProtectedRoute from "./Routes/ProtectedRoute";
 
 export default function App() { 
     return(
@@ -13,11 +15,17 @@ export default function App() {
                 <AuthProvider>
                     <Routes>
                         <Route path="/login" element={<Login/>}/>
-                        <Route path="/home" element={<Home/>}/>
                         <Route path="/aluno/cadastrar" element={<CadastroAluno/>}/>
                         <Route path="/registration/registration" element={<Registration/>}/>
-                        <Route path="/professor/alunos" element={<Students/>}/>
+                        <Route path="/convite/aceitar" element={<Accept/>} />
+
+                        <Route element={<ProtectedRoute/>}>
+                            <Route path="/home" element={<Home/>}/>
+                            <Route path="/professor/alunos" element={<Students/>}/>
+                        </Route>
+                        
                         <Route path="*" element={<Navigate to="/login" replace />} />
+                        
                     </Routes>
                 </AuthProvider>
             </BrowserRouter>
