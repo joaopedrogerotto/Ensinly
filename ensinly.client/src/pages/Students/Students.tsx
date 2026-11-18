@@ -8,6 +8,7 @@ import StatCard from "../../Components/StatCard/StatCard";
 import { FaUserGroup } from "react-icons/fa6";
 import { FaClipboard } from "react-icons/fa";
 import { useAuth } from "../../Context/AuthContext";
+import InformationalModal from "../../Components/InformationalModal/InformationalModal";
 
 interface AlunoResponse{
     id: number;
@@ -34,6 +35,12 @@ export default function Students(){
     const [maiorNivelAprendizado, setMaiorNivelAprendizado] = useState<MaiorNivelAprendizadoResponse>();
     const {user, loading} = useAuth();
 
+    //Modal
+    const [showModal, setShowModal] = useState(false);
+    const [typeModal, setTypeModal] = useState("");
+    const [titleModal, setTitleModal] = useState("");
+    const [textModal, setTextModal] = useState("");
+
     function createStatNivel(){
         if (!maiorNivelAprendizado) {
             return "Carregando...";
@@ -49,9 +56,18 @@ export default function Students(){
     async function getAlunoParaVinculo(){
         const response = await fetch(`/api/aluno/${emailAluno}/vinculo`);
 
-        if(!response.ok){
-            const error = await response.json();
-            throw new Error(error.message);
+        if(response.status === 404){
+            setTypeModal("error");
+            setTitleModal("Aluno não encontrado.");
+            setTextModal(`Aluno com o e-mail "${emailAluno}" não encontrado`);
+            setShowModal(true);
+            return;
+        }else if(!response.ok){
+            const data = await response.json();
+            setTypeModal("error");
+            setTitleModal("Erro ao buscar aluno pelo e-mail.");
+            setTextModal(data.message);
+            setShowModal(true);
         }
 
         const data = await response.json();
@@ -82,6 +98,11 @@ export default function Students(){
         const data = await response.json();
         setMaiorNivelAprendizado(data);
     }
+
+    function handleCloseModal() {
+        setShowModal(false);
+    }
+
 
     useEffect(() =>{
         if(loading || !user?.id) return;
@@ -134,6 +155,15 @@ export default function Students(){
                     </div>
                 </div>
             </div>
+
+            {showModal && (
+                <InformationalModal
+                    typeModal={typeModal}
+                    titleModal={titleModal}
+                    textModal={textModal}
+                    onClose={handleCloseModal}
+                />
+            )}
         </>
     )
 }
