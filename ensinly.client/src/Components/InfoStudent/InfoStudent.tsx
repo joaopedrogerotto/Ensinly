@@ -44,6 +44,7 @@ export default function InfoStudent({alunoResponse}:InfoStudentProps){
     const [titleModal, setTitleModal] = useState("");
     const [textModal, setTextModal] = useState("");
 
+
     async function generateInvite(){
         if(isLoading){
             return;
@@ -92,6 +93,14 @@ export default function InfoStudent({alunoResponse}:InfoStudentProps){
         setShowModal(false);
     }
 
+    function setTextButtonByVinculo(){
+        switch (alunoResponse?.vinculoStatus){
+            case "VINCULADO": return "Aluno já vinculado";
+            case "PENDENTE": return "Convite pendente"
+            default: return "Convidar"
+        }
+    }
+
 
     return(
         <>
@@ -122,11 +131,11 @@ export default function InfoStudent({alunoResponse}:InfoStudentProps){
                     (
                         <Button 
                             functionButton={generateInvite}
-                            textButton={(vinculo === "PENDENTE" || alunoResponse?.vinculoStatus === "PENDENTE") ? "Convite Pendente":"Convidar"}
+                            textButton={setTextButtonByVinculo() }
                             styleButton="buttonBlueForm"
                             isLoading={isLoading}
                             loadingText="Enviando..."
-                            disabled={(vinculo  === "PENDENTE" || alunoResponse?.vinculoStatus === "PENDENTE")}
+                            disabled={(alunoResponse?.vinculoStatus === "PENDENTE" || alunoResponse?.vinculoStatus === "VINCULADO")}
                         />
                     )
                 }

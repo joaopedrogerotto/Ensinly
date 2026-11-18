@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Projetos\\Ensinly\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\controllers\\alunocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\controllers\\convitecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\controllers\\convitecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\dao\\daotoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\dao\\daotoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\facade\\facadetoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\facade\\facadetoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\controllers\\tokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\dao\\interfaces\\idaotoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\dao\\interfaces\\idaotoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|c:\\projetos\\ensinly\\ensinly.server\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D618FA8B-32D1-B5E5-4102-4197E6E3F644}|Ensinly.Server\\Ensinly.Server.csproj|solutionrelative:ensinly.server\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,19 +86,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Program.cs",
-              "RelativeDocumentMoniker": "Ensinly.Server\\Program.cs",
-              "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Program.cs",
-              "RelativeToolTip": "Ensinly.Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AlunoController.cs",
+              "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Controllers\\AlunoController.cs",
+              "RelativeDocumentMoniker": "Ensinly.Server\\Controllers\\AlunoController.cs",
+              "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Controllers\\AlunoController.cs",
+              "RelativeToolTip": "Ensinly.Server\\Controllers\\AlunoController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwD4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-16T13:20:16.483Z"
+              "WhenOpened": "2026-11-17T23:48:44.696Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "ConviteController.cs",
+              "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Controllers\\ConviteController.cs",
+              "RelativeDocumentMoniker": "Ensinly.Server\\Controllers\\ConviteController.cs",
+              "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Controllers\\ConviteController.cs",
+              "RelativeToolTip": "Ensinly.Server\\Controllers\\ConviteController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-17T23:46:08.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Ensinly.Server\\appsettings.Development.json",
@@ -102,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "FacadeToken.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Facade\\FacadeToken.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Facade\\FacadeToken.cs",
@@ -114,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "IFacadeToken.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Facade\\Inteface\\IFacadeToken.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Facade\\Inteface\\IFacadeToken.cs",
@@ -126,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "InvalidOrExpiredTokenException.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Exceptions\\InvalidOrExpiredTokenException.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Exceptions\\InvalidOrExpiredTokenException.cs",
@@ -138,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "EntityNotFoundException.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Exceptions\\EntityNotFoundException.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\Exceptions\\EntityNotFoundException.cs",
@@ -150,13 +172,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "DAOToken.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\DAO\\DAOToken.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\DAO\\DAOToken.cs",
               "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\DAO\\DAOToken.cs",
               "RelativeToolTip": "Ensinly.Server\\DAO\\DAOToken.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-15T22:42:30.343Z",
               "EditorCaption": ""
@@ -169,13 +191,39 @@
               "RelativeDocumentMoniker": "Ensinly.Server\\Controllers\\TokenController.cs",
               "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Controllers\\TokenController.cs",
               "RelativeToolTip": "Ensinly.Server\\Controllers\\TokenController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAABqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-13T11:23:49.68Z"
+              "WhenOpened": "2026-11-13T11:23:49.68Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Ensinly.Server\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Ensinly.Server\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwC0AAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-15T22:39:07.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Program.cs",
+              "RelativeDocumentMoniker": "Ensinly.Server\\Program.cs",
+              "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Program.cs",
+              "RelativeToolTip": "Ensinly.Server\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T13:20:16.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "IDAOToken.cs",
               "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\DAO\\Interfaces\\IDAOToken.cs",
               "RelativeDocumentMoniker": "Ensinly.Server\\DAO\\Interfaces\\IDAOToken.cs",
@@ -184,18 +232,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-15T22:41:33.054Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Ensinly.Server\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Projetos\\Ensinly\\Ensinly.Server\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Ensinly.Server\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBgAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-15T22:39:07.586Z"
             }
           ]
         }
