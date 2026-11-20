@@ -48,9 +48,15 @@ export default function Students(){
 
         const {totalAlunos, totalAlunosNivel} = maiorNivelAprendizado;
         
-        const percentage = totalAlunos > 0 ? (totalAlunosNivel * 100) / totalAlunos : 0;
+        const percentage = (totalAlunos > 0 ? (totalAlunosNivel * 100) / totalAlunos : 0);
 
-        return `${maiorNivelAprendizado.totalAlunosNivel} de ${maiorNivelAprendizado.totalAlunos} alunos (${percentage}%)`
+         const percentageFormat = percentage.toLocaleString('pt-BR', {
+            style: 'percent',
+            minimumFractionDigits: 1,
+            maximumFractionDigits: 2,
+        });
+
+        return `${maiorNivelAprendizado.totalAlunosNivel} de ${maiorNivelAprendizado.totalAlunos} alunos (${percentageFormat})`
     }
 
     async function getAlunoParaVinculo(){
@@ -148,7 +154,7 @@ export default function Students(){
                         <StatCard
                             IconStatReact={FaUserGroup}
                             titleStatCard="Nivel de aprendizado"
-                            amountStatCard={maiorNivelAprendizado?.nivel ?? "Carregando..."}
+                            amountStatCard={maiorNivelAprendizado?.nivel ?? "Sem alunos"}
                             classNameStatCard="cardOragen"
                             descriptionStatCard={createStatNivel()}
                         />
