@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useReducer } from "react";
 import { useSearchParams } from "react-router-dom";
 import Navbar from "../../../Components/NavBar/Navbar";
 import { useAuth } from "../../../Context/AuthContext";
@@ -14,6 +14,8 @@ export default function Accept() {
     const [success, setSuccess] = useState(false);
 
     const { setUser } = useAuth();
+
+    const validationStarted = useRef(false);
 
     async function validateToken() {
         try {
@@ -47,6 +49,10 @@ export default function Accept() {
     }
 
     useEffect(() => {
+        if (validationStarted.current) return;
+
+        validationStarted.current = true;
+
         if (!token) {
             setResponseToken("Token não informado ou inválido.");
             setLoading(false);
@@ -54,7 +60,7 @@ export default function Accept() {
         }
 
         validateToken();
-    }, []);
+    }, [token]);
 
     return (
         <>
