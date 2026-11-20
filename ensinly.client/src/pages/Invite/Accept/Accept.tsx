@@ -1,5 +1,5 @@
 
-import { useEffect, useState, useRef, useReducer } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import Navbar from "../../../Components/NavBar/Navbar";
 import { useAuth } from "../../../Context/AuthContext";
