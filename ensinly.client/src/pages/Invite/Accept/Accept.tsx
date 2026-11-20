@@ -28,19 +28,19 @@ export default function Accept() {
                 body: JSON.stringify(token)
             });
 
-            const msg = await response.json();
+            if (response.status === 401) {
+                const msg = await response.text();
+
+                setResponseToken(msg || "Convite inválido ou expirado.");
+                return;
+            }
 
             if (response.ok) {
-                setUser(msg);
+                const usuario = await response.json();
+                setUser(usuario);
                 setResponseToken("Seu convite foi aceito com sucesso!");
                 setSuccess(true);
-            } else {
-                setResponseToken(
-                    typeof msg === "string"
-                        ? msg
-                        : msg.message || "Não foi possível validar seu convite."
-                );
-            }
+            } 
         } catch {
             setResponseToken("Não foi possível conectar ao servidor. Tente novamente.");
         } finally {
