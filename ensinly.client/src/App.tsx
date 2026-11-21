@@ -6,6 +6,7 @@ import CadastroAluno from "./pages/Registration/StudentRegistration/StudentRegis
 import Registration from "./pages/Registration/Registration";
 import Students from "./pages/Students/Students";
 import Accept from "./pages/Invite/Accept/Accept";
+import Schedule from "./pages/Schedule/Schedule";
 import ProtectedRoute from "./Routes/ProtectedRoute";
 
 export default function App() { 
@@ -18,6 +19,7 @@ export default function App() {
                         <Route path="/aluno/cadastrar" element={<CadastroAluno/>}/>
                         <Route path="/registration/registration" element={<Registration/>}/>
                         <Route path="/convite/aceitar" element={<Accept/>} />
+                        <Route path="/professor/agenda" element={<Schedule/>} />
 
                         <Route element={<ProtectedRoute/>}>
                             <Route path="/home" element={<Home/>}/>

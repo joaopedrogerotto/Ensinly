@@ -44,7 +44,10 @@ export default function Navbar(){
                     <FaStickyNote/>
                     Anotações
                 </li>
-                <li>
+                <li
+                    onClick={() => navigate("/professor/agenda")}
+                    className={location.pathname === "/professor/agenda" ? style.active : ""}
+                >
                     <FaCalendar/>
                     Agenda
                 </li>
