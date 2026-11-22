@@ -8,3 +8,23 @@
     box-sizing: border-box;
     margin-left: 240px;
 }
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.btnAgendar {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.btnAgendar:hover {
+    background-color: #162d6b;
+}

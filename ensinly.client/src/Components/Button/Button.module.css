@@ -34,3 +34,39 @@
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+.scheduleLessonButton{
+    width: 500px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    border-radius: 10px;
+    background: #1e3a8a;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-bottom: 20px;
+}
+
+.backPageButton{
+    width: 500px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    border-radius: 10px;
+    background: #888888;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-bottom: 20px;
+}

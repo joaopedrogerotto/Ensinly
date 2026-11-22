@@ -8,6 +8,7 @@ import Students from "./pages/Students/Students";
 import Accept from "./pages/Invite/Accept/Accept";
 import Schedule from "./pages/Schedule/Schedule";
 import ProtectedRoute from "./Routes/ProtectedRoute";
+import ScheduleLesson from "./pages/ScheduleLesson/ScheduleLesson";
 
 export default function App() { 
     return(
@@ -19,11 +20,12 @@ export default function App() {
                         <Route path="/aluno/cadastrar" element={<CadastroAluno/>}/>
                         <Route path="/registration/registration" element={<Registration/>}/>
                         <Route path="/convite/aceitar" element={<Accept/>} />
-                        <Route path="/professor/agenda" element={<Schedule/>} />
 
                         <Route element={<ProtectedRoute/>}>
                             <Route path="/home" element={<Home/>}/>
                             <Route path="/professor/alunos" element={<Students/>}/>
+                            <Route path="/professor/agenda" element={<Schedule/>} />
+                            <Route path="/professor/agenda/agendar-aula" element={<ScheduleLesson/>}/>
                         </Route>
                         
                         <Route path="*" element={<Navigate to="/login" replace />} />

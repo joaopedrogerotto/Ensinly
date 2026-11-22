@@ -18,6 +18,7 @@ builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("Emai
 
 builder.Services.AddTransient<EmailService>();
 builder.Services.AddScoped<ConviteService>();
+builder.Services.AddSingleton<AulaService>();
 
 builder.Services.AddSingleton<IDAODatabase, DAOSQLServer>();
 builder.Services.AddSingleton<IDAOUsuario, DAOUsuario>();
@@ -28,6 +29,7 @@ builder.Services.AddSingleton<IDAONivelAprendizado, DAONivelAprendizado>();
 builder.Services.AddSingleton<IDAOMateria, DAOMateria>();
 builder.Services.AddSingleton<IDAOConvite, DAOConvite>();
 builder.Services.AddSingleton<IDAOToken, DAOToken>();
+builder.Services.AddSingleton<IDAOAula, DAOAula>();
 
 builder.Services.AddSingleton<IFacadeUsuario, FacadeUsuario>();
 builder.Services.AddSingleton<IFacadeAluno, FacadeAluno>();
@@ -37,6 +39,7 @@ builder.Services.AddSingleton<IFacadeNivelAprendizado, FacadeNivelAprendizado>()
 builder.Services.AddSingleton<IFacadeMateria, FacadeMateria>();
 builder.Services.AddScoped<IFacadeConvite, FacadeConvite>();
 builder.Services.AddSingleton<IFacadeToken, FacadeToken>();
+builder.Services.AddSingleton<IFacadeAula, FacadeAula>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(op => {
     op.Cookie.Name = "session";

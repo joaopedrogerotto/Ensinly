@@ -1,0 +1,134 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px;
+    box-sizing: border-box;
+    margin-left: 240px;
+    min-height: 100vh;
+}
+
+.form {
+    width: 100%;
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    grid-column: 1 / -1;
+    margin: 1.5rem 0;
+    font-size: 1.6rem;
+    color: #1e3a8a;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 1.25rem;
+    min-width: 0;
+}
+
+/* Aluno ocupa a linha inteira */
+.inputGroup:first-of-type {
+    grid-column: 1 / -1;
+}
+
+/* Observação ocupa a linha inteira */
+.inputGroup:last-of-type {
+    grid-column: 1 / -1;
+}
+
+.inputGroup label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.inputGroup textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
+}
+
+.dateTimeGroup {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+    min-width: 0;
+    grid-column: 1 / -1;
+}
+
+.dateTimeGroup p {
+    grid-column: 1 / -1;
+    margin: 0 0 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+.dateTimeGroup .inputGroup:first-of-type,
+.dateTimeGroup .inputGroup:last-of-type {
+    grid-column: auto;
+}
+
+.dateTimeGroup .inputGroup {
+    margin-bottom: 1rem;
+}
+
+.observacao {
+    grid-column: 1 / -1;
+}
+
+.btnGroup {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    grid-column: 1 / -1;
+}
+
+.btnGroup > * {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-left: 0;
+        padding: 24px 16px;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .title,
+    .inputGroup:first-of-type,
+    .inputGroup:last-of-type {
+        grid-column: 1;
+    }
+}
