@@ -1,4 +1,5 @@
 ﻿using Ensinly.Server.DAO.Interfaces;
+using Ensinly.Server.DTO;
 using Ensinly.Server.Exceptions;
 using Ensinly.Server.Models;
 using Microsoft.Data.SqlClient;
@@ -37,6 +38,35 @@ namespace Ensinly.Server.DAO {
             }catch (Exception ex) {
                 throw new Exception(ex.Message);
             }
+        }
+
+        public async Task<List<AulaResponseDTO>> SelectAulasByProfessor(Professor Professor) {
+            var aulas = new List<AulaResponseDTO>();
+
+            using (var conn = await _database.OpenConnection()) {
+                using (var cmd = new SqlCommand("PR_S_AULAS_POR_PROFESSOR", conn)) {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ID_PROF", Professor.Id);
+                    using (var reader = await cmd.ExecuteReaderAsync()) {
+                        while (await reader.ReadAsync()) {
+                            aulas.Add(
+                                new AulaResponseDTO {
+                                    Aluno = new AlunoResponseAulaDTO {
+                                        Id = reader.GetInt32(reader.GetOrdinal("ID_ALUNO")),
+                                        Nome = reader.GetString(reader.GetOrdinal("NOME"))
+                                    },
+                                    Status = reader.GetString(reader.GetOrdinal("STATUS")),
+                                    Observacao = reader.IsDBNull(reader.GetOrdinal("OBSERVACAO")) ? string.Empty : reader.GetString(reader.GetOrdinal("OBSERVACAO")),
+                                    DataHoraInicio = reader.GetDateTime(reader.GetOrdinal("DT_HR_INICIO")),
+                                    DataHoraFim = reader.GetDateTime(reader.GetOrdinal("DT_HR_FIM")),
+                                    Professor = Professor
+                                }
+                            );
+                        }
+                    }
+                }
+            }
+            return aulas;
         }
     }
 }

@@ -34,5 +34,18 @@ namespace Ensinly.Server.Controllers {
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAulasByProfessor() {
+            try {
+                
+                var listAula = await _facadeAula.SelecionarAulasDoProfessor(12);
+                return Ok(listAula);
+            }catch(EntityNotFoundException ex) {
+                return NotFound(ex.Message);
+            } catch (Exception ex) {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

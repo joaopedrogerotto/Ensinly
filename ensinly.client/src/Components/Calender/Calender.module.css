@@ -47,6 +47,8 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-rows: auto;
+    grid-auto-rows: 150px;
     gap: 10px;
     width: 100%;
 }
@@ -61,11 +63,14 @@
 
 .day {
     min-width: 0;
-    min-height: 42px;
+    height: 150px;
+    min-height: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 8px;
+    padding: 8px;
     box-sizing: border-box;
     border: 1px solid transparent;
     border-radius: 8px;
@@ -101,4 +106,58 @@
 
 .past:hover {
     background-color: #e2e8f0;
+}
+
+.dayNumber {
+    font-weight: 600;
+    align-self: flex-start;
+    flex-shrink: 0;
+}
+
+.lessonsList {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.lessonsList::-webkit-scrollbar {
+    width: 4px;
+}
+
+.lessonsList::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.lessonsList::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 10px;
+}
+
+.lessonsList::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+.lessonCard {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: #dbeafe;
+    border-left: 3px solid #2563eb;
+    color: #1e40af;
+    font-size: 0.7rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.today .lessonCard {
+    background-color: #FFFFFF;
+    color: #1e3a8a;
+    border-left-color: #60a5fa;
 }

@@ -1,8 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import style from "./Calender.module.css"
+
+interface Aluno{
+    id: number;
+    nome: string;
+}
+
+interface Professor{
+    id: number;
+    nome: string;
+    email: string;
+    descricao: string;
+    status: boolean;
+}
+
+interface Aula{
+    aluno: Aluno;
+    status: string;
+    observacao?: string;
+    dataHoraInicio: string;
+    dataHoraFim: string;
+    professor: Professor;
+}
 
 export default function Calender(){
     const [currentDate, setCurrentDate] = useState(new Date());
+    
+    const [lessons, setLesson] = useState<Aula[]>(); 
 
     const year = currentDate.getFullYear();
     const month = currentDate.getMonth();
@@ -25,9 +49,35 @@ export default function Calender(){
         year: "numeric"
     });
 
+    const lessonDates = lessons?.map(lesson =>{
+        const date =  new Date(lesson.dataHoraFim)
+        return new Date(
+            date.getFullYear(),
+            date.getMonth(),
+            date.getDate()
+        ).toISOString();
+    } 
+    ) ?? [];
+
     function changeMonth(value: number) {
         setCurrentDate(new Date(year, month + value, 1));
     }
+
+    async function  getAulas() {
+        const response = await fetch("/api/aula");
+        
+        if(!response.ok){
+            const error = await response.json();
+            throw new Error("Erro ao buscar aulas: " + error.message);
+        }
+
+        const data = await response.json();
+        setLesson(data);
+    }
+
+    useEffect(() => {
+        getAulas()
+    }, []);
     
     return(
         <div className={style.calendar}>
@@ -44,6 +94,7 @@ export default function Calender(){
                     <div key={day} className={style.weekday}>
                         {day}
                     </div>
+
                 ))}
 
                 {daysList.map((day, index) => {
@@ -56,10 +107,44 @@ export default function Calender(){
 
                     const isPast = day !== null &&
                         new Date(year, month, day) < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+                    let todayLessons;
+                    if(lessonDates?.includes(new Date(year, month, day!!).toISOString())){
+                         todayLessons = lessons?.filter(lesson => {
+                            const lessonDate = new Date(lesson.dataHoraInicio);
+
+                            return (
+                                lessonDate.getDate() === day &&
+                                lessonDate.getMonth() === month &&
+                                lessonDate.getFullYear() === year
+                            );
+                        });
+
+                    }
+
                     return (
-                        <div key={index} className={`${style.day} ${isToday ? style.today : ""} ${isPast ? style.past : ""}`}>
-                            {day}
-                        </div>
+                        <>                        
+                            <div key={index} className={`${style.day} ${isToday ? style.today : ""} ${isPast ? style.past : ""}`}>
+                                <span className={style.dayNumber}>{day}</span>
+                                <div className={style.lessonsList}>
+                                    {todayLessons?.map((lesson, lessonIndex) => {
+                                        const date = new Date(lesson.dataHoraInicio);
+
+                                        const lessonHour = String(date.getHours()).padStart(2, "0");
+                                        const lessonMinutes = String(date.getMinutes()).padStart(2, "0");
+
+                                        return (
+                                            <div key={lessonIndex} className={style.lessonCard}>
+                                                <span>{lesson.aluno.nome}</span>
+                                                <span>{lessonHour}:{lessonMinutes}</span>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+
+                        </>
+
                     )
                 })}
             </div>

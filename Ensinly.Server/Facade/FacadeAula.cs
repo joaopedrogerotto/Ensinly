@@ -1,7 +1,9 @@
 ﻿using Ensinly.Server.DAO.Interfaces;
 using Ensinly.Server.DTO;
+using Ensinly.Server.Exceptions;
 using Ensinly.Server.Facade.Inteface;
 using Ensinly.Server.Mapper;
+using Ensinly.Server.Models;
 using Ensinly.Server.Service;
 
 namespace Ensinly.Server.Facade {
@@ -21,6 +23,16 @@ namespace Ensinly.Server.Facade {
             _aulaService.ValidateDate(aula);
             aula.Professor = await _daoProfessor.SelectProfessorByIdUsuario(idUsuarioProfessor);
             return await _daoAula.InsertAula(aula);
+        }
+
+        public async Task<List<AulaResponseDTO>> SelecionarAulasDoProfessor(int idUsuarioProfessor) {
+            var professor = await _daoProfessor.SelectProfessorByIdUsuario(idUsuarioProfessor);
+
+            if(professor == null) {
+                throw new EntityNotFoundException("Professor não encontrado");
+            }
+
+            return await _daoAula.SelectAulasByProfessor(professor);
         }
     }
 }
