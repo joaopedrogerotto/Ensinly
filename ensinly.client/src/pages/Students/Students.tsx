@@ -48,11 +48,11 @@ export default function Students(){
 
         const {totalAlunos, totalAlunosNivel} = highestLevelLearning;
         
-        const percentage = (totalAlunos > 0 ? (totalAlunosNivel * 100) / totalAlunos : 0);
+        const percentage = totalAlunos > 0 ? totalAlunosNivel / totalAlunos : 0;
 
          const percentageFormat = percentage.toLocaleString('pt-BR', {
             style: 'percent',
-            minimumFractionDigits: 1,
+            minimumFractionDigits: 2,
             maximumFractionDigits: 2,
         });
 
