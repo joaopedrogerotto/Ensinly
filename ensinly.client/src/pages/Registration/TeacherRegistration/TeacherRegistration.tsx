@@ -16,19 +16,19 @@ interface ProfessorRequest{
 }
 
 export default function TeacherRegistration() {
-    const [senhasIguais, setSenhasIguais] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
     const navigate = useNavigate();
 
-    const [materias, setMaterias] = useState<Materia[]>([]);
+    const [subjects, setSubjects] = useState<Materia[]>([]);
 
-    const [selectedMaterias, setSelectedMaterias] = useState<Materia[]>([]);
+    const [selectedSubjects, setSelectedSubjects] = useState<Materia[]>([]);
 
     //Dados Professor
-    const [nome, setNome] = useState("");
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [senha, setSenha] = useState("");
-    const [descricao, setDescricao] = useState("");
+    const [password, setPassword] = useState("");
+    const [description, setDescription] = useState("");
 
     async function getMaterias() {
         const response = await fetch("/api/materia");
@@ -39,18 +39,18 @@ export default function TeacherRegistration() {
         }
         
         const data: Materia[] = await response.json();
-        setMaterias(data);
+        setSubjects(data);
     }
 
     async function postProfessor(event: React.SubmitEvent){
         event.preventDefault();
         
         const profRequest:ProfessorRequest = {
-            Nome: nome,
+            Nome: name,
             Email: email,
-            Senha: senha,
-            Descricao: descricao,
-            IdMaterias: selectedMaterias.map((m) => m.id)
+            Senha: password,
+            Descricao: description,
+            IdMaterias: selectedSubjects.map((m) => m.id)
         };
 
         const response = await fetch("/api/professor",{
@@ -73,30 +73,30 @@ export default function TeacherRegistration() {
 
     function validatePassword(password: string, confirmPassword:string){
         if(password === confirmPassword){
-            setSenha(password);
-            setSenhasIguais("");
+            setPassword(password);
+            setConfirmPassword("");
         }else{
-            setSenhasIguais("As senhas não coincidem");
+            setConfirmPassword("As senhas não coincidem");
         }
     }
 
     function handleSelectMateria(id: number){
-        const materiaSelecionada = materias.find((m) => m.id === id);
+        const materiaSelecionada = subjects.find((s) => s.id === id);
 
         if(!materiaSelecionada){
             return;
         }
 
-        if(selectedMaterias.some((m) => m.id === id)){
+        if(selectedSubjects.some((s) => s.id === id)){
             return;
         }
         
-        setSelectedMaterias((prev) => [...prev,materiaSelecionada]);
+        setSelectedSubjects((prev) => [...prev,materiaSelecionada]);
     }
 
     function removeSelectMateria(id: number){
-        const materiasFiltro = selectedMaterias.filter(materia => materia.id !== id);
-        setSelectedMaterias(materiasFiltro);
+        const materiasFiltro = selectedSubjects.filter(materia => materia.id !== id);
+        setSelectedSubjects(materiasFiltro);
     }
 
     useEffect(() => {
@@ -111,7 +111,7 @@ export default function TeacherRegistration() {
 
                     <div className={style.inputGroup}>
                         <label htmlFor="nomeProf">Nome:</label>
-                        <input type="text" name="nomeProf" id="nomeProf" placeholder="Digite o nome completo" required onChange={(e) => setNome(e.target.value)} />
+                        <input type="text" name="nomeProf" id="nomeProf" placeholder="Digite o nome completo" required onChange={(e) => setName(e.target.value)} />
                     </div>
 
                     <div className={style.inputGroup}>
@@ -121,7 +121,7 @@ export default function TeacherRegistration() {
 
                     <div className={style.inputGroup}>
                         <label htmlFor="descricaoProf">Descrição:</label>
-                        <textarea name="descricaoProf" id="descricaoProf" placeholder="Descrição professor" required onChange={(e) => setDescricao(e.target.value)} />
+                        <textarea name="descricaoProf" id="descricaoProf" placeholder="Descrição professor" required onChange={(e) => setDescription(e.target.value)} />
                     </div>
 
                     <div className={style.row}>
@@ -129,17 +129,17 @@ export default function TeacherRegistration() {
                             <label htmlFor="selectMaterias">Materias</label>
                             <select id="selectMaterias" name="materias" defaultValue="" required onChange={(e) => handleSelectMateria(Number(e.target.value))}>
                                 <option value="" disabled>Selecione...</option>
-                                {materias.map((materia) =>(
-                                    <option key={materia.id} value={materia.id}>
-                                        {materia.nome}
+                                {subjects.map((subject) =>(
+                                    <option key={subject.id} value={subject.id}>
+                                        {subject.nome}
                                     </option>
                                 ))}
                             </select>
                             <div className={style.groupMaterias}>
-                                {selectedMaterias.map((materia) => (
-                                    <div key={materia.id} className={style.cardMateria}>
-                                        <button type="button" className={style.removeButton} onClick={() => removeSelectMateria(materia.id)}>x</button>
-                                        <p>{materia.nome}</p>
+                                {selectedSubjects.map((subject) => (
+                                    <div key={subject.id} className={style.cardMateria}>
+                                        <button type="button" className={style.removeButton} onClick={() => removeSelectMateria(subject.id)}>x</button>
+                                        <p>{subject.nome}</p>
                                     </div>
                                 ))}
                             </div>
@@ -147,17 +147,17 @@ export default function TeacherRegistration() {
 
                         <div className={style.inputGroup}>
                             <label htmlFor="senhaProf">Senha:</label>
-                            <input type="password" name="senhaProf" id="senhaProf" placeholder="Digite sua senha" required onChange={(e) => setSenha(e.target.value)} />
+                            <input type="password" name="senhaProf" id="senhaProf" placeholder="Digite sua senha" required onChange={(e) => setPassword(e.target.value)} />
                         </div>
 
                         <div className={style.inputGroup}>
                             <label htmlFor="confirmSenhaProf">Confirmar Senha:</label>
                             <input type="password" name="confirmSenhaProf" id="confirmSenhaProf" placeholder="Confirme a senha" required onChange={(e) =>
-                                validatePassword(senha, e.target.value)
+                                validatePassword(password, e.target.value)
                             } />
-                            {senhasIguais && (
+                            {confirmPassword && (
                                 <span className={style.errorMessage}>
-                                    {senhasIguais}
+                                    {confirmPassword}
                                 </span>
                             )}
                         </div>

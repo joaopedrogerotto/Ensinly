@@ -30,7 +30,7 @@ export default function InfoStudent({alunoResponse}:InfoStudentProps){
     const {user} = useAuth();
 
     const [isLoading, setIsLoading] = useState(false);
-    const [vinculo, setVinculo] = useState("");
+    const [bond, setBond] = useState("");
 
     const conviteRequest: ConviteRequest = {
         IdProfessorUsuario: Number(user?.id),
@@ -69,7 +69,7 @@ export default function InfoStudent({alunoResponse}:InfoStudentProps){
                 setTitleModal("Convite enviado!");
                 setTextModal("O convite foi enviado com sucesso para o email do aluno.");
                 setShowModal(true);
-                setVinculo("PENDENTE");
+                setBond("PENDENTE");
             } else {
                 const data = await response.json();
                 setTypeModal("error");
@@ -127,7 +127,7 @@ export default function InfoStudent({alunoResponse}:InfoStudentProps){
                     <input type="text" name="obsAluno" id="obsAluno" value={alunoResponse?.observacao} readOnly/>
                 </div>
                 {
-                   (vinculo !== "SEM VINCULO" || alunoResponse?.vinculoStatus !== "SEM VINCULO") &&
+                   (bond !== "SEM VINCULO" || alunoResponse?.vinculoStatus !== "SEM VINCULO") &&
                     (
                         <Button 
                             functionButton={generateInvite}

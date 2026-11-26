@@ -17,7 +17,7 @@ interface AlunoResponse{
 export default function MyStudents(){
     const {user, loading} = useAuth();
 
-    const [alunos, setAlunos] = useState<AlunoResponse[]>([]);
+    const [students, setStudents] = useState<AlunoResponse[]>([]);
 
     async function getStudents() {
         const response = await fetch(`/api/Professor/${user!.id}/alunos`);
@@ -28,7 +28,7 @@ export default function MyStudents(){
         }
 
         const data = await response.json();
-        setAlunos(data);
+        setStudents(data);
     }
 
     useEffect(() => {
@@ -53,7 +53,7 @@ export default function MyStudents(){
                         </thead>
 
                         <tbody>
-                            {alunos.map((a) => (
+                            {students.map((a) => (
                                 <tr key={a.id}>
                                     <td>{a.nome}</td>
                                     <td>{a.email}</td>

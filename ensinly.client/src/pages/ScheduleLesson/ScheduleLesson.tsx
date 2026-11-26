@@ -32,21 +32,21 @@ interface AulaRequest{
 
 export default function ScheduleLesson(){
     const {user} = useAuth();
-    const [alunos, setAlunos] = useState<AlunoResponse[]>([]);
-    const [alunoSelecionado, setAlunoSelecionado] = useState<OpcaoAluno | null>(null);
-    const opcoesAlunos: OpcaoAluno[] = alunos.map((aluno) => ({
-        value: aluno.id,
-        label: aluno.nome,
+    const [students, setStudents] = useState<AlunoResponse[]>([]);
+    const [selectedStundet, setSelectedStundet] = useState<OpcaoAluno | null>(null);
+    const opcoesAlunos: OpcaoAluno[] = students.map((student) => ({
+        value: student.id,
+        label: student.nome,
     }));
 
     const navigate = useNavigate();
 
     //campos para Aula request
-    const [dataInicio, setDataInicio] = useState<string>();
-    const [horaInicio, setHoraInicio] = useState<string>();
-    const [dataFim, setDataFim] = useState<string>();
-    const [horaFim, setHoraFim] = useState<string>();
-    const [observacao, setObservacao] = useState<string>();
+    const [dateStart, setDateStart] = useState<string>();
+    const [hourStart, setHourStart] = useState<string>();
+    const [dateEnd, setDateEnd] = useState<string>();
+    const [hourEnd, setHourEnd] = useState<string>();
+    const [observation, setObservation] = useState<string>();
 
     //Modal
     const [showModal, setShowModal] = useState(false);
@@ -66,26 +66,26 @@ export default function ScheduleLesson(){
         }
 
         const data = await response.json();
-        setAlunos(data);
+        setObservation(data);
     }
 
     async function postAula(){
-        const dataHoraInicio = `${dataInicio}T${horaInicio}`;
-        const dataHoraFim = `${dataFim}T${horaFim}`;
+        const dateHourStart = `${dateStart}T${hourStart}`;
+        const dateHourEnd = `${dateEnd}T${hourEnd}`;
 
-        if(Date.parse(dataHoraInicio) >= Date.parse(dataHoraFim) ){
+        if(Date.parse(dateHourStart) >= Date.parse(dateHourEnd) ){
             setErrorData("A data e hora de início não pode ser maior que a data e hora final.");
             return;
         }
 
         const AulaRequest: AulaRequest = {
-            idAluno: Number(alunoSelecionado?.value),
-            dataHoraInicio: dataHoraInicio,
-            dataHoraFim: dataHoraFim
+            idAluno: Number(selectedStundet?.value),
+            dataHoraInicio: dateHourStart,
+            dataHoraFim: dateHourEnd
         };
 
-        if(observacao !== "" || observacao !== null){
-            AulaRequest.observacao = observacao;
+        if(observation !== "" || observation !== null){
+            AulaRequest.observacao = observation;
         }
 
         const response = await fetch("/api/aula", {
@@ -145,8 +145,8 @@ export default function ScheduleLesson(){
                             inputId="selectAlunoAgenda"
                             name="alunoAgenda"
                             options={opcoesAlunos}
-                            value={alunoSelecionado}
-                            onChange={setAlunoSelecionado}
+                            value={selectedStundet}
+                            onChange={setSelectedStundet}
                             placeholder="Digite para buscar..."
                             noOptionsMessage={() => "Nenhum aluno encontrado"}
                             isClearable
@@ -157,27 +157,27 @@ export default function ScheduleLesson(){
                         <p>Início da aula:</p>
                         <div className={style.inputGroup}>
                             <label htmlFor="dtAulaInicio">Data:</label>
-                            <input type="date" name="dtAulaInicio" min={new Date().toLocaleDateString("sv-SE")} onChange={(e) => setDataInicio(e.target.value)} id="dtAulaInicio" required/>
+                            <input type="date" name="dtAulaInicio" min={new Date().toLocaleDateString("sv-SE")} onChange={(e) => setDateStart(e.target.value)} id="dtAulaInicio" required/>
                         </div>
                         <div className={style.inputGroup}>
                             <label htmlFor="horaInicioAula">Horário:</label>
-                            <input type="time" name="horaAula" id="horaInicioAula" onChange={(e) => setHoraInicio(e.target.value)} required/>
+                            <input type="time" name="horaAula" id="horaInicioAula" onChange={(e) => setHourStart(e.target.value)} required/>
                         </div>
                     </div>
                     <div className={style.dateTimeGroup}>
                         <p>Fim da aula:</p>
                         <div className={style.inputGroup}>
                             <label htmlFor="dtAulaFim">Data:</label>
-                            <input type="date" name="dtAulaFim" min={new Date().toLocaleDateString("sv-SE")} id="dtAulaFim" onChange={(e) => setDataFim(e.target.value)} required/>
+                            <input type="date" name="dtAulaFim" min={new Date().toLocaleDateString("sv-SE")} id="dtAulaFim" onChange={(e) => setDateEnd(e.target.value)} required/>
                         </div>
                         <div className={style.inputGroup}>
                             <label htmlFor="horaFimAula">Horário:</label>
-                            <input type="time" name="horaAula" id="horaFimAula" required onChange={(e) => setHoraFim(e.target.value)}/>
+                            <input type="time" name="horaAula" id="horaFimAula" required onChange={(e) => setHourEnd(e.target.value)}/>
                         </div>
                     </div>
                     <div className={`${style.inputGroup} ${style.observacao}`}>
                         <label htmlFor="obsAula">Observação:</label>
-                        <textarea name="obsAula" id="obsAula" onChange={(e) => setObservacao(e.target.value)}/>
+                        <textarea name="obsAula" id="obsAula" onChange={(e) => setObservation(e.target.value)}/>
                     </div>
                     <div className={style.btnGroup}>
                         <Button

@@ -18,15 +18,15 @@ interface AlunoRequest{
 export default function CadastroAluno() {
     const [niveis, setNiveis] = useState<NivelAprendizado[]>([]);
 
-    const [senhasIguais, setSenhasIguais] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
     const navigate = useNavigate();
 
     //Dados Aluno
-    const [nome, setNome] = useState("");
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [senha, setSenha] = useState("");
-    const [dtNascimento, setDtNascimento] = useState("");
+    const [password, setPassword] = useState("");
+    const [dateBirth, setDateBirth] = useState("");
     const [idNivelAprendizado, setIdNivelAprendizado] = useState(0);
 
     async function getNiveisAprendizado() {
@@ -45,10 +45,10 @@ export default function CadastroAluno() {
         event.preventDefault();
 
         const alunoRequest: AlunoRequest = {
-            Nome: nome,
+            Nome: name,
             Email: email,
-            Senha: senha,
-            DataNascimento: dtNascimento,
+            Senha: password,
+            DataNascimento: dateBirth,
             IdNivelAprendizado: idNivelAprendizado
         };
 
@@ -72,10 +72,10 @@ export default function CadastroAluno() {
 
     function validatePassword(password: string, confirmPassword:string){
         if(password === confirmPassword){
-            setSenha(password);
-            setSenhasIguais("");
+            setPassword(password);
+            setConfirmPassword("");
         }else{
-            setSenhasIguais("As senhas não coincidem");
+            setConfirmPassword("As senhas não coincidem");
         }
     }
 
@@ -92,7 +92,7 @@ export default function CadastroAluno() {
 
                     <div className={style.inputGroup}>
                         <label htmlFor="nomeAluno">Nome:</label>
-                        <input type="text" name="nomeAluno" id="nomeAluno" placeholder="Digite o nome completo" required  onChange={(e) => setNome(e.target.value)}/>
+                        <input type="text" name="nomeAluno" id="nomeAluno" placeholder="Digite o nome completo" required  onChange={(e) => setName(e.target.value)}/>
                     </div>
 
                     <div className={style.inputGroup}>
@@ -103,7 +103,7 @@ export default function CadastroAluno() {
                     <div className={style.row}>
                         <div className={style.inputGroup}>
                             <label htmlFor="dtNascimentoAluno">Data de nascimento:</label>
-                            <input type="date" name="dtNascimentoAluno" id="dtNascimentoAluno" required onChange={(e) => setDtNascimento(e.target.value)}/>
+                            <input type="date" name="dtNascimentoAluno" id="dtNascimentoAluno" required onChange={(e) => setDateBirth(e.target.value)}/>
                         </div>
 
                         <div className={style.inputGroup}>
@@ -120,17 +120,17 @@ export default function CadastroAluno() {
 
                         <div className={style.inputGroup}>
                             <label htmlFor="senhaAluno">Senha:</label>
-                            <input type="password" name="senhaAluno" id="senhaAluno" placeholder="Digite sua senha" required onChange={(e) => setSenha(e.target.value)}/>
+                            <input type="password" name="senhaAluno" id="senhaAluno" placeholder="Digite sua senha" required onChange={(e) => setPassword(e.target.value)}/>
                         </div>
 
                         <div className={style.inputGroup}>
                             <label htmlFor="confirmSenha">Confirmar Senha:</label>
                             <input type="password" name="senhaAluno" id="senhaAluno" placeholder="Confirme a senha" required  onChange={(e) =>
-                                validatePassword(senha, e.target.value)
+                                validatePassword(password, e.target.value)
                             }/>
-                            {senhasIguais && (
+                            {confirmPassword && (
                                 <span className={style.errorMessage}>
-                                    {senhasIguais}
+                                    {confirmPassword}
                                 </span>                          
                             )}
                         </div>

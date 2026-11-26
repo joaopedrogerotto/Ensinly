@@ -29,10 +29,10 @@ interface MaiorNivelAprendizadoResponse{
 };
 
 export default function Students(){
-    const [emailAluno, setEmailAluno] = useState("");
-    const [aluno, setAluno] = useState<AlunoResponse>();
-    const [quantidadeAlunos, setQuantidadeAluno] = useState(0);
-    const [maiorNivelAprendizado, setMaiorNivelAprendizado] = useState<MaiorNivelAprendizadoResponse>();
+    const [studentEmail, setStudentEmail] = useState("");
+    const [student, setStudent] = useState<AlunoResponse>();
+    const [amountStundets, setAmountStudents] = useState(0);
+    const [highestLevelLearning, setHighestLevelLearning] = useState<MaiorNivelAprendizadoResponse>();
     const {user, loading} = useAuth();
 
     //Modal
@@ -42,11 +42,11 @@ export default function Students(){
     const [textModal, setTextModal] = useState("");
 
     function createStatNivel(){
-        if (!maiorNivelAprendizado) {
+        if (!highestLevelLearning) {
             return "Carregando...";
         }
 
-        const {totalAlunos, totalAlunosNivel} = maiorNivelAprendizado;
+        const {totalAlunos, totalAlunosNivel} = highestLevelLearning;
         
         const percentage = (totalAlunos > 0 ? (totalAlunosNivel * 100) / totalAlunos : 0);
 
@@ -56,16 +56,16 @@ export default function Students(){
             maximumFractionDigits: 2,
         });
 
-        return `${maiorNivelAprendizado.totalAlunosNivel} de ${maiorNivelAprendizado.totalAlunos} alunos (${percentageFormat})`
+        return `${highestLevelLearning.totalAlunosNivel} de ${highestLevelLearning.totalAlunos} alunos (${percentageFormat})`
     }
 
     async function getAlunoParaVinculo(){
-        const response = await fetch(`/api/aluno/${emailAluno}/vinculo`);
+        const response = await fetch(`/api/aluno/${studentEmail}/vinculo`);
 
         if(response.status === 404){
             setTypeModal("error");
             setTitleModal("Aluno não encontrado.");
-            setTextModal(`Aluno com o e-mail "${emailAluno}" não encontrado`);
+            setTextModal(`Aluno com o e-mail "${studentEmail}" não encontrado`);
             setShowModal(true);
             return;
         }else if(!response.ok){
@@ -77,7 +77,7 @@ export default function Students(){
         }
 
         const data = await response.json();
-        setAluno(data);
+        setStudent(data);
     }
 
     async function getAmoutAlunosByProfessor() {
@@ -90,7 +90,7 @@ export default function Students(){
         }
 
         const data = await response.json();
-        setQuantidadeAluno(data);
+        setAmountStudents(data);
     }
 
     async function getMaiorNivelAprendizado() {
@@ -102,7 +102,7 @@ export default function Students(){
         }
 
         const data = await response.json();
-        setMaiorNivelAprendizado(data);
+        setHighestLevelLearning(data);
     }
 
     function handleCloseModal() {
@@ -132,17 +132,17 @@ export default function Students(){
                             labelText="Pesquisar aluno por e-mail" 
                             placeholder="exemplo@email.com" 
                             functionSreach={getAlunoParaVinculo} 
-                            functionSetAttribute={setEmailAluno} 
+                            functionSetAttribute={setStudentEmail} 
                             textButton="Pesquisar"
                         />
-                        <InfoStudent alunoResponse={aluno}/>
+                        <InfoStudent alunoResponse={student}/>
                     </div>
 
                     <div className={style.groupCardStats}>
                         <StatCard
                             IconStatReact={FaUserGroup}
                             titleStatCard="Total de alunos ativos"
-                            amountStatCard={(quantidadeAlunos).toString()}
+                            amountStatCard={(amountStundets).toString()}
                             classNameStatCard="cardGreen"
                         />
                         <StatCard
@@ -154,7 +154,7 @@ export default function Students(){
                         <StatCard
                             IconStatReact={FaUserGroup}
                             titleStatCard="Nivel de aprendizado"
-                            amountStatCard={maiorNivelAprendizado?.nivel ?? "Sem alunos"}
+                            amountStatCard={highestLevelLearning?.nivel ?? "Sem alunos"}
                             classNameStatCard="cardOragen"
                             descriptionStatCard={createStatNivel()}
                         />
