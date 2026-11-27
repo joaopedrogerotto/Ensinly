@@ -5,7 +5,7 @@ import { useAuth } from "../../Context/AuthContext";
 import Select from "react-select";
 import Button from "../../Components/Button/Button";
 import InformationalModal from "../../Components/InformationalModal/InformationalModal";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 interface AlunoResponse{
     id: number;
@@ -18,7 +18,7 @@ interface AlunoResponse{
     status: boolean;
 };
 
-interface OpcaoAluno {
+interface OptionStudent {
     value: number;
     label: string;
 }
@@ -30,14 +30,21 @@ interface AulaRequest{
     observacao?: string;
 }
 
+
 export default function ScheduleLesson(){
     const {user} = useAuth();
     const [students, setStudents] = useState<AlunoResponse[]>([]);
-    const [selectedStundet, setSelectedStundet] = useState<OpcaoAluno | null>(null);
-    const opcoesAlunos: OpcaoAluno[] = students.map((student) => ({
+    const [selectedStundet, setSelectedStundet] = useState<OptionStudent | null>(null);
+    const optionStudent: OptionStudent[] = students.map((student) => ({
         value: student.id,
         label: student.nome,
     }));
+
+    //Parametros URL de DATA
+    const [searchParams] = useSearchParams();
+    const dayParam = searchParams.get("day");
+    const monthParam = searchParams.get("month");
+    const yearParam = searchParams.get("year");
 
     const navigate = useNavigate();
 
@@ -66,7 +73,7 @@ export default function ScheduleLesson(){
         }
 
         const data = await response.json();
-        setObservation(data);
+        setStudents(data);
     }
 
     async function postAula(){
@@ -129,6 +136,16 @@ export default function ScheduleLesson(){
     }
 
     useEffect(() =>{
+        if (dayParam && monthParam && yearParam) {
+            const day = Number(dayParam);
+            const month = Number(monthParam);
+            const year = Number(yearParam);
+
+            const date = `${yearParam}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+
+            setDateStart(date);
+        }
+        
         getStudents();
     },[]);    
 
@@ -144,7 +161,7 @@ export default function ScheduleLesson(){
                         <Select
                             inputId="selectAlunoAgenda"
                             name="alunoAgenda"
-                            options={opcoesAlunos}
+                            options={optionStudent}
                             value={selectedStundet}
                             onChange={setSelectedStundet}
                             placeholder="Digite para buscar..."
@@ -157,7 +174,7 @@ export default function ScheduleLesson(){
                         <p>Início da aula:</p>
                         <div className={style.inputGroup}>
                             <label htmlFor="dtAulaInicio">Data:</label>
-                            <input type="date" name="dtAulaInicio" min={new Date().toLocaleDateString("sv-SE")} onChange={(e) => setDateStart(e.target.value)} id="dtAulaInicio" required/>
+                            <input type="date" name="dtAulaInicio" min={new Date().toLocaleDateString("sv-SE")} onChange={(e) => setDateStart(e.target.value)} id="dtAulaInicio" value={dateStart ?? ""} required />
                         </div>
                         <div className={style.inputGroup}>
                             <label htmlFor="horaInicioAula">Horário:</label>

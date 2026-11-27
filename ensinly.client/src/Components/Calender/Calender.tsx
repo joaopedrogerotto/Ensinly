@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import style from "./Calender.module.css"
+import { Link } from "react-router-dom";
 
 interface Aluno{
     id: number;
@@ -124,7 +125,10 @@ export default function Calender(){
 
                     return (
                         <>                        
-                            <div key={index} className={`${style.day} ${isToday ? style.today : ""} ${isPast ? style.past : ""}`}>
+                            <Link 
+                                key={index} 
+                                 to={`/professor/agenda/agendar-aula?day=${day}&month=${month+1}&year=${year}`}
+                                className={`${style.day} ${isToday ? style.today : ""} ${isPast ? style.past : ""}`}>
                                 <span className={style.dayNumber}>{day}</span>
                                 <div className={style.lessonsList}>
                                     {todayLessons?.map((lesson, lessonIndex) => {
@@ -141,8 +145,7 @@ export default function Calender(){
                                         );
                                     })}
                                 </div>
-                            </div>
-
+                            </Link>
                         </>
 
                     )
