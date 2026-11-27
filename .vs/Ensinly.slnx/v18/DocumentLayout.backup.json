@@ -91,8 +91,7 @@
               "RelativeToolTip": "Ensinly.Server\\DAO\\Interfaces\\IDAOAula.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T10:59:50.904Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-24T10:59:50.904Z"
             },
             {
               "$type": "Document",
@@ -104,8 +103,7 @@
               "RelativeToolTip": "Ensinly.Server\\DTO\\AlunoResponseAulaDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-25T00:44:05.191Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-25T00:44:05.191Z"
             },
             {
               "$type": "Document",
@@ -117,8 +115,7 @@
               "RelativeToolTip": "Ensinly.Server\\Program.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-25T00:34:50.182Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-25T00:34:50.182Z"
             },
             {
               "$type": "Document",
@@ -130,8 +127,7 @@
               "RelativeToolTip": "Ensinly.Server\\Controllers\\AulaController.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAowCkAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-22T14:49:32.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-22T14:49:32.98Z"
             },
             {
               "$type": "Document",
@@ -143,8 +139,7 @@
               "RelativeToolTip": "Ensinly.Server\\DAO\\DAOAula.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAwwC0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T11:00:50.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-24T11:00:50.148Z"
             },
             {
               "$type": "Document",
@@ -156,8 +151,7 @@
               "RelativeToolTip": "Ensinly.Server\\Facade\\FacadeAula.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAA1wB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T10:58:33.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-24T10:58:33.726Z"
             },
             {
               "$type": "Document",
@@ -169,8 +163,7 @@
               "RelativeToolTip": "Ensinly.Server\\Facade\\Inteface\\IFacadeAula.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-24T10:57:10.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-24T10:57:10.707Z"
             }
           ]
         }

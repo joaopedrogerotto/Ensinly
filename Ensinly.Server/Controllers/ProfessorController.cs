@@ -2,6 +2,7 @@
 using Ensinly.Server.Facade.Inteface;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Ensinly.Server.Controllers {
     [ApiController]
@@ -30,6 +31,12 @@ namespace Ensinly.Server.Controllers {
         [HttpGet("{idUsuario}/alunos")]
         public async Task<IActionResult> GetAlunosByProfessor([FromRoute]int idUsuario) {
             if(idUsuario == 0 || idUsuario == null) {
+                return BadRequest("ID do usuário inválido.");
+            }
+            
+            int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out int idUsuarioProfessor);
+
+            if(idUsuario != idUsuarioProfessor) {
                 return BadRequest("ID do usuário inválido.");
             }
 
